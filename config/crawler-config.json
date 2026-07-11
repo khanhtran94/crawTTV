@@ -3,7 +3,7 @@
   "slug" : "huyen-tran-dao-do",
   "fromChapter" : 290,
   "toChapter" : 753,
-  "nextChapter" : 340,
+  "nextChapter" : 390,
   "batchSize" : 50,
   "requestDelayMillis" : 9500,
   "enabled" : true
