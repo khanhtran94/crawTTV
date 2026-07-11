@@ -1,12 +1,9 @@
 name: Crawl Tang Thu Vien
 
 on:
-  workflow_dispatch:
-
-  # Có thể bật chạy tự động.
-  # 02:00 UTC tương đương 09:00 Việt Nam.
-  schedule:
-    - cron: "7,27,47 * * * *"
+  workflow_dispatch: # Vẫn giữ để bạn click tay khi cần
+  repository_dispatch:
+    types: [crawttv] # Tên sự kiện do dịch vụ ngoài gửi vào
 
 permissions:
   contents: write
