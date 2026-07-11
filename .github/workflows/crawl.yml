@@ -6,7 +6,7 @@ on:
   # Có thể bật chạy tự động.
   # 02:00 UTC tương đương 09:00 Việt Nam.
   schedule:
-    - cron: "*/20 * * * *"
+    - cron: "7,27,47 * * * *"
 
 permissions:
   contents: write
