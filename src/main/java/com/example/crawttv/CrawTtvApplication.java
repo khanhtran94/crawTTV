@@ -1,5 +1,7 @@
 package com.example.crawttv;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -15,55 +17,128 @@ import java.nio.file.StandardOpenOption;
 @SpringBootApplication
 public class CrawTtvApplication {
 
-	private static final String BASE_URL =
-			"https://tangthuvien.org/huyen-tran-dao-do/";
+	private static final String WEBSITE_URL =
+			"https://tangthuvien.org/";
 
-	private static final Path OUTPUT_DIRECTORY = Path.of("output");
+	private static final Path CONFIG_FILE =
+			Path.of("config", "crawler-config.json");
 
-	private static final long REQUEST_DELAY_MILLIS = 9_500L;
+	private static final Path OUTPUT_ROOT =
+			Path.of("output");
+
+	private static final ObjectMapper OBJECT_MAPPER =
+			new ObjectMapper()
+					.enable(SerializationFeature.INDENT_OUTPUT);
 
 	public static void main(String[] args) {
-		int fromChapter = getEnvInt("FROM_CHAPTER", 4);
-		int toChapter = getEnvInt("TO_CHAPTER", 753);
-
-		if (fromChapter <= 0) {
-			throw new IllegalArgumentException(
-					"FROM_CHAPTER phải lớn hơn 0"
+		try {
+			CrawlerConfig config = readConfig();
+			validateConfig(config);
+			runCrawler(config);
+		} catch (Exception exception) {
+			System.err.println(
+					"Crawler kết thúc do lỗi: " +
+							exception.getMessage()
 			);
+
+			exception.printStackTrace();
+			System.exit(1);
+		}
+	}
+
+	private static void runCrawler(CrawlerConfig config)
+			throws IOException {
+
+		if (!config.isEnabled()) {
+			System.out.println(
+					"Truyện đang bị tắt trong cấu hình."
+			);
+			return;
 		}
 
-		if (toChapter < fromChapter) {
-			throw new IllegalArgumentException(
-					"TO_CHAPTER phải lớn hơn hoặc bằng FROM_CHAPTER"
+		if (config.getNextChapter() > config.getToChapter()) {
+			System.out.printf(
+					"Đã crawl xong truyện \"%s\" đến chương %d.%n",
+					config.getBookName(),
+					config.getToChapter()
 			);
+			return;
 		}
+
+		int fromChapter = Math.max(
+				config.getNextChapter(),
+				config.getFromChapter()
+		);
+
+		int calculatedToChapter =
+				fromChapter + config.getBatchSize() - 1;
+
+		int batchToChapter = Math.min(
+				calculatedToChapter,
+				config.getToChapter()
+		);
 
 		System.out.printf(
-				"Bắt đầu crawl từ chương %d đến chương %d%n",
+				"Truyện: %s%n",
+				config.getBookName()
+		);
+
+		System.out.printf(
+				"Slug: %s%n",
+				config.getSlug()
+		);
+
+		System.out.printf(
+				"Batch hiện tại: chương %d đến chương %d%n",
 				fromChapter,
-				toChapter
+				batchToChapter
 		);
 
 		int successCount = 0;
 		int skippedCount = 0;
 		int failedCount = 0;
 
-		for (int chapter = fromChapter; chapter <= toChapter; chapter++) {
+		/*
+		 * Chỉ cập nhật nextChapter đến chương đã xử lý liên tục.
+		 * Nếu một chương lỗi, crawler dừng batch để lần sau thử lại
+		 * đúng chương đó.
+		 */
+		int nextChapter = fromChapter;
+
+		for (
+				int chapter = fromChapter;
+				chapter <= batchToChapter;
+				chapter++
+		) {
 			try {
-				if (chapterExists(chapter)) {
+				if (chapterExists(config, chapter)) {
 					System.out.printf(
-							"Bỏ qua chương %d vì file đã tồn tại%n",
+							"Bỏ qua chương %d vì file đã tồn tại.%n",
 							chapter
 					);
 
 					skippedCount++;
+					nextChapter = chapter + 1;
 					continue;
 				}
 
-				ChapterData data = crawlChapter(chapter);
-				saveChapter(data);
+				ChapterData data = crawlChapter(
+						config,
+						chapter
+				);
+
+				saveChapter(config, data);
 
 				successCount++;
+				nextChapter = chapter + 1;
+
+				/*
+				 * Ghi trạng thái sau từng chương.
+				 * Nếu Action bị dừng giữa chừng thì vẫn nhớ được
+				 * chương cuối đã tải.
+				 */
+				config.setNextChapter(nextChapter);
+				writeConfig(config);
 
 				System.out.printf(
 						"Đã lấy chương %d: %s%n",
@@ -75,11 +150,15 @@ public class CrawTtvApplication {
 				failedCount++;
 
 				System.err.printf(
-						"Chương %d trả về HTTP %d: %s%n",
+						"Chương %d trả về HTTP %d.%n",
 						chapter,
-						exception.getStatusCode(),
-						exception.getUrl()
+						exception.getStatusCode()
 				);
+
+				/*
+				 * Dừng để lần chạy sau thử lại chương đang lỗi.
+				 */
+				break;
 
 			} catch (Exception exception) {
 				failedCount++;
@@ -90,26 +169,44 @@ public class CrawTtvApplication {
 						exception.getMessage()
 				);
 
-			} finally {
-				// Không cần chờ sau chương cuối cùng
-				if (chapter < toChapter) {
-					sleepBeforeNextRequest();
-				}
+				break;
+			}
+
+			if (chapter < batchToChapter) {
+				sleep(config.getRequestDelayMillis());
 			}
 		}
 
+		config.setNextChapter(nextChapter);
+		writeConfig(config);
+
 		System.out.println();
-		System.out.println("Hoàn thành crawler.");
+		System.out.println("Kết quả batch:");
 		System.out.println("Thành công: " + successCount);
 		System.out.println("Đã tồn tại: " + skippedCount);
 		System.out.println("Thất bại: " + failedCount);
-		System.out.println("Chương cuối được yêu cầu: " + toChapter);
+		System.out.println(
+				"Chương tiếp theo: " +
+						config.getNextChapter()
+		);
+
+		if (config.getNextChapter() > config.getToChapter()) {
+			System.out.printf(
+					"Đã hoàn thành toàn bộ truyện đến chương %d.%n",
+					config.getToChapter()
+			);
+		}
 	}
 
-	private static ChapterData crawlChapter(int chapterNumber)
-			throws IOException {
+	private static ChapterData crawlChapter(
+			CrawlerConfig config,
+			int chapterNumber
+	) throws IOException {
 
-		String url = BASE_URL + chapterNumber;
+		String url = buildChapterUrl(
+				config,
+				chapterNumber
+		);
 
 		Document document = Jsoup.connect(url)
 				.userAgent(
@@ -148,15 +245,20 @@ public class CrawTtvApplication {
 				.replaceFirst("^#\\d+\\s*", "")
 				.trim();
 
-		Elements paragraphs = contentElement.select("p");
+		Elements paragraphs =
+				contentElement.select("p");
 
-		StringBuilder content = new StringBuilder();
+		StringBuilder content =
+				new StringBuilder();
 
 		for (Element paragraph : paragraphs) {
-			String text = paragraph.text().trim();
+			String text =
+					paragraph.text().trim();
 
 			if (!text.isBlank()) {
-				content.append(text).append("\n\n");
+				content
+						.append(text)
+						.append("\n\n");
 			}
 		}
 
@@ -174,12 +276,21 @@ public class CrawTtvApplication {
 		);
 	}
 
-	private static void saveChapter(ChapterData data)
-			throws IOException {
+	private static void saveChapter(
+			CrawlerConfig config,
+			ChapterData data
+	) throws IOException {
 
-		Files.createDirectories(OUTPUT_DIRECTORY);
+		Path bookDirectory =
+				getBookOutputDirectory(config);
 
-		Path outputFile = getChapterFile(data);
+		Files.createDirectories(bookDirectory);
+
+		String filename = String.format(
+				"%04d-%s.txt",
+				data.chapterNumber(),
+				sanitizeFilename(data.title())
+		);
 
 		String fileContent =
 				data.title() + "\n\n" +
@@ -187,72 +298,145 @@ public class CrawTtvApplication {
 						"Nguồn: " + data.url() + "\n";
 
 		Files.writeString(
-				outputFile,
+				bookDirectory.resolve(filename),
 				fileContent,
 				StandardOpenOption.CREATE,
 				StandardOpenOption.TRUNCATE_EXISTING
 		);
 	}
 
-	private static boolean chapterExists(int chapterNumber)
-			throws IOException {
+	private static boolean chapterExists(
+			CrawlerConfig config,
+			int chapterNumber
+	) throws IOException {
 
-		if (!Files.exists(OUTPUT_DIRECTORY)) {
+		Path bookDirectory =
+				getBookOutputDirectory(config);
+
+		if (!Files.exists(bookDirectory)) {
 			return false;
 		}
 
-		String chapterPrefix = String.format(
+		String prefix = String.format(
 				"%04d-",
 				chapterNumber
 		);
 
-		try (var files = Files.list(OUTPUT_DIRECTORY)) {
+		try (var files = Files.list(bookDirectory)) {
 			return files
 					.filter(Files::isRegularFile)
 					.anyMatch(path ->
 							path.getFileName()
 									.toString()
-									.startsWith(chapterPrefix)
+									.startsWith(prefix)
 					);
 		}
 	}
 
-	private static Path getChapterFile(ChapterData data) {
-		String filename = String.format(
-				"%04d-%s.txt",
-				data.chapterNumber(),
-				sanitizeFilename(data.title())
-		);
-
-		return OUTPUT_DIRECTORY.resolve(filename);
+	private static Path getBookOutputDirectory(
+			CrawlerConfig config
+	) {
+		return OUTPUT_ROOT.resolve(config.getSlug());
 	}
 
-	private static int getEnvInt(
-			String variableName,
-			int defaultValue
+	private static String buildChapterUrl(
+			CrawlerConfig config,
+			int chapterNumber
 	) {
-		String value = System.getenv(variableName);
+		return WEBSITE_URL +
+				config.getSlug() +
+				"/" +
+				chapterNumber;
+	}
 
-		if (value == null || value.isBlank()) {
-			return defaultValue;
+	private static CrawlerConfig readConfig()
+			throws IOException {
+
+		if (!Files.exists(CONFIG_FILE)) {
+			throw new IllegalStateException(
+					"Không tìm thấy file cấu hình: " +
+							CONFIG_FILE
+			);
 		}
 
-		try {
-			return Integer.parseInt(value.trim());
+		return OBJECT_MAPPER.readValue(
+				CONFIG_FILE.toFile(),
+				CrawlerConfig.class
+		);
+	}
 
-		} catch (NumberFormatException exception) {
+	private static void writeConfig(
+			CrawlerConfig config
+	) throws IOException {
+
+		Files.createDirectories(
+				CONFIG_FILE.getParent()
+		);
+
+		OBJECT_MAPPER.writeValue(
+				CONFIG_FILE.toFile(),
+				config
+		);
+	}
+
+	private static void validateConfig(
+			CrawlerConfig config
+	) {
+		if (
+				config.getBookName() == null ||
+						config.getBookName().isBlank()
+		) {
 			throw new IllegalArgumentException(
-					variableName +
-							" không phải là số hợp lệ: " +
-							value
+					"bookName không được để trống"
+			);
+		}
+
+		if (
+				config.getSlug() == null ||
+						config.getSlug().isBlank()
+		) {
+			throw new IllegalArgumentException(
+					"slug không được để trống"
+			);
+		}
+
+		if (config.getFromChapter() <= 0) {
+			throw new IllegalArgumentException(
+					"fromChapter phải lớn hơn 0"
+			);
+		}
+
+		if (
+				config.getToChapter() <
+						config.getFromChapter()
+		) {
+			throw new IllegalArgumentException(
+					"toChapter phải lớn hơn hoặc bằng fromChapter"
+			);
+		}
+
+		if (config.getNextChapter() <= 0) {
+			throw new IllegalArgumentException(
+					"nextChapter phải lớn hơn 0"
+			);
+		}
+
+		if (config.getBatchSize() <= 0) {
+			throw new IllegalArgumentException(
+					"batchSize phải lớn hơn 0"
+			);
+		}
+
+		if (config.getRequestDelayMillis() < 1000) {
+			throw new IllegalArgumentException(
+					"requestDelayMillis nên từ 1000 trở lên"
 			);
 		}
 	}
 
-	private static void sleepBeforeNextRequest() {
+	private static void sleep(long millis) {
 		try {
-			Thread.sleep(REQUEST_DELAY_MILLIS);
-
+			Thread.sleep(millis);
 		} catch (InterruptedException exception) {
 			Thread.currentThread().interrupt();
 
@@ -263,7 +447,9 @@ public class CrawTtvApplication {
 		}
 	}
 
-	private static String sanitizeFilename(String input) {
+	private static String sanitizeFilename(
+			String input
+	) {
 		return input
 				.replaceAll("[\\\\/:*?\"<>|]", "")
 				.replaceAll("\\s+", " ")
