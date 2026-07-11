@@ -3,7 +3,7 @@ name: Test Schedule External
 on:
   workflow_dispatch: # Vẫn giữ để bạn click tay khi cần
   repository_dispatch:
-    types: test_trigger # Tên sự kiện do dịch vụ ngoài gửi vào
+    types: [test_trigger] # Tên sự kiện do dịch vụ ngoài gửi vào
 
 jobs:
   test:
