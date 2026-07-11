@@ -1,10 +1,10 @@
 {
-  "bookName": "Huyền Trần Đạo Đồ",
-  "slug": "huyen-tran-dao-do",
-  "fromChapter": 290,
-  "toChapter": 753,
-  "nextChapter": 4,
-  "batchSize": 50,
-  "requestDelayMillis": 9500,
-  "enabled": true
+  "bookName" : "Huyền Trần Đạo Đồ",
+  "slug" : "huyen-tran-dao-do",
+  "fromChapter" : 290,
+  "toChapter" : 753,
+  "nextChapter" : 340,
+  "batchSize" : 50,
+  "requestDelayMillis" : 9500,
+  "enabled" : true
 }
