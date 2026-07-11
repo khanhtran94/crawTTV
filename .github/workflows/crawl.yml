@@ -58,4 +58,5 @@ jobs:
           NEXT_CHAPTER=$(jq -r '.nextChapter' config/crawler-config.json)
 
           git commit -m "Crawl ${BOOK_NAME}, next chapter ${NEXT_CHAPTER}"
+          git pull --rebase origin master
           git push
