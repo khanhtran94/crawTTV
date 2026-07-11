@@ -1,0 +1,60 @@
+name: Crawl Tang Thu Vien
+
+on:
+  workflow_dispatch:
+    inputs:
+      fromChapter:
+        description: "Chương bắt đầu"
+        required: true
+        default: "4"
+
+      toChapter:
+        description: "Chương kết thúc"
+        required: true
+        default: "753"
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+
+    env:
+      FROM_CHAPTER: ${{ inputs.fromChapter }}
+      TO_CHAPTER: ${{ inputs.toChapter }}
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+
+      - name: Build project
+        run: mvn --batch-mode clean package -DskipTests
+
+      - name: Show generated files
+        run: ls -la target
+
+      - name: Run crawler
+        run: java -jar target/tang-thu-vien-crawler.jar
+
+      - name: Commit crawled chapters
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add output/
+
+          if git diff --cached --quiet; then
+            echo "Không có chương mới để commit"
+          else
+            git commit -m "Crawl chương ${FROM_CHAPTER}-${TO_CHAPTER}"
+            git push
+          fi

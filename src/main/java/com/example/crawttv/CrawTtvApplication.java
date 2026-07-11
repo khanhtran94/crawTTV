@@ -1,41 +1,109 @@
 package com.example.crawttv;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
+
 @SpringBootApplication
 public class CrawTtvApplication {
 
 	private static final String BASE_URL =
 			"https://tangthuvien.org/huyen-tran-dao-do/";
 
+	private static final Path OUTPUT_DIRECTORY = Path.of("output");
+
+	private static final long REQUEST_DELAY_MILLIS = 9_500L;
+
 	public static void main(String[] args) {
-		int fromChapter = 4;
-		int toChapter = 753;
+		int fromChapter = getEnvInt("FROM_CHAPTER", 4);
+		int toChapter = getEnvInt("TO_CHAPTER", 753);
+
+		if (fromChapter <= 0) {
+			throw new IllegalArgumentException(
+					"FROM_CHAPTER phải lớn hơn 0"
+			);
+		}
+
+		if (toChapter < fromChapter) {
+			throw new IllegalArgumentException(
+					"TO_CHAPTER phải lớn hơn hoặc bằng FROM_CHAPTER"
+			);
+		}
+
+		System.out.printf(
+				"Bắt đầu crawl từ chương %d đến chương %d%n",
+				fromChapter,
+				toChapter
+		);
+
+		int successCount = 0;
+		int skippedCount = 0;
+		int failedCount = 0;
 
 		for (int chapter = fromChapter; chapter <= toChapter; chapter++) {
 			try {
+				if (chapterExists(chapter)) {
+					System.out.printf(
+							"Bỏ qua chương %d vì file đã tồn tại%n",
+							chapter
+					);
+
+					skippedCount++;
+					continue;
+				}
+
 				ChapterData data = crawlChapter(chapter);
-
-				System.out.println("Đã lấy: " + data.title());
-
 				saveChapter(data);
-				Thread.sleep(9500);
 
-			} catch (Exception e) {
-				System.err.println(
-						"Không thể lấy chương " + chapter + ": " + e.getMessage()
+				successCount++;
+
+				System.out.printf(
+						"Đã lấy chương %d: %s%n",
+						data.chapterNumber(),
+						data.title()
 				);
+
+			} catch (HttpStatusException exception) {
+				failedCount++;
+
+				System.err.printf(
+						"Chương %d trả về HTTP %d: %s%n",
+						chapter,
+						exception.getStatusCode(),
+						exception.getUrl()
+				);
+
+			} catch (Exception exception) {
+				failedCount++;
+
+				System.err.printf(
+						"Không thể lấy chương %d: %s%n",
+						chapter,
+						exception.getMessage()
+				);
+
+			} finally {
+				// Không cần chờ sau chương cuối cùng
+				if (chapter < toChapter) {
+					sleepBeforeNextRequest();
+				}
 			}
 		}
+
+		System.out.println();
+		System.out.println("Hoàn thành crawler.");
+		System.out.println("Thành công: " + successCount);
+		System.out.println("Đã tồn tại: " + skippedCount);
+		System.out.println("Thất bại: " + failedCount);
+		System.out.println("Chương cuối được yêu cầu: " + toChapter);
 	}
 
 	private static ChapterData crawlChapter(int chapterNumber)
@@ -48,15 +116,21 @@ public class CrawTtvApplication {
 						"Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
 								"AppleWebKit/537.36 Chrome/149 Safari/537.36"
 				)
-				.header("Accept-Language", "vi-VN,vi;q=0.9,en;q=0.8")
+				.header(
+						"Accept-Language",
+						"vi-VN,vi;q=0.9,en;q=0.8"
+				)
 				.timeout(20_000)
 				.followRedirects(true)
 				.get();
 
-		Element titleElement = document.selectFirst("h1.text-xl");
+		Element titleElement =
+				document.selectFirst("h1.text-xl");
 
 		Element contentElement =
-				document.selectFirst("div.py-2.flex.flex-col.gap-4");
+				document.selectFirst(
+						"div.py-2.flex.flex-col.gap-4"
+				);
 
 		if (titleElement == null) {
 			throw new IllegalStateException(
@@ -103,26 +177,90 @@ public class CrawTtvApplication {
 	private static void saveChapter(ChapterData data)
 			throws IOException {
 
-		Path outputDirectory = Path.of("output");
-		Files.createDirectories(outputDirectory);
+		Files.createDirectories(OUTPUT_DIRECTORY);
 
+		Path outputFile = getChapterFile(data);
+
+		String fileContent =
+				data.title() + "\n\n" +
+						data.content() + "\n\n" +
+						"Nguồn: " + data.url() + "\n";
+
+		Files.writeString(
+				outputFile,
+				fileContent,
+				StandardOpenOption.CREATE,
+				StandardOpenOption.TRUNCATE_EXISTING
+		);
+	}
+
+	private static boolean chapterExists(int chapterNumber)
+			throws IOException {
+
+		if (!Files.exists(OUTPUT_DIRECTORY)) {
+			return false;
+		}
+
+		String chapterPrefix = String.format(
+				"%04d-",
+				chapterNumber
+		);
+
+		try (var files = Files.list(OUTPUT_DIRECTORY)) {
+			return files
+					.filter(Files::isRegularFile)
+					.anyMatch(path ->
+							path.getFileName()
+									.toString()
+									.startsWith(chapterPrefix)
+					);
+		}
+	}
+
+	private static Path getChapterFile(ChapterData data) {
 		String filename = String.format(
 				"%04d-%s.txt",
 				data.chapterNumber(),
 				sanitizeFilename(data.title())
 		);
 
-		String fileContent =
-				data.title() + "\n\n" +
-						data.content() + "\n\n" +
-						"Nguồn: " + data.url();
+		return OUTPUT_DIRECTORY.resolve(filename);
+	}
 
-		Files.writeString(
-				outputDirectory.resolve(filename),
-				fileContent,
-				StandardOpenOption.CREATE,
-				StandardOpenOption.TRUNCATE_EXISTING
-		);
+	private static int getEnvInt(
+			String variableName,
+			int defaultValue
+	) {
+		String value = System.getenv(variableName);
+
+		if (value == null || value.isBlank()) {
+			return defaultValue;
+		}
+
+		try {
+			return Integer.parseInt(value.trim());
+
+		} catch (NumberFormatException exception) {
+			throw new IllegalArgumentException(
+					variableName +
+							" không phải là số hợp lệ: " +
+							value
+			);
+		}
+	}
+
+	private static void sleepBeforeNextRequest() {
+		try {
+			Thread.sleep(REQUEST_DELAY_MILLIS);
+
+		} catch (InterruptedException exception) {
+			Thread.currentThread().interrupt();
+
+			throw new IllegalStateException(
+					"Crawler bị dừng khi đang chờ",
+					exception
+			);
+		}
 	}
 
 	private static String sanitizeFilename(String input) {
@@ -139,5 +277,4 @@ public class CrawTtvApplication {
 			String url
 	) {
 	}
-
 }
