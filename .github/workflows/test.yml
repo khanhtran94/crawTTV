@@ -1,14 +1,13 @@
-name: Test Schedule
+name: Test Schedule External
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "20,40 * * * *"
+  workflow_dispatch: # Vẫn giữ để bạn click tay khi cần
+  repository_dispatch:
+    types: test_trigger # Tên sự kiện do dịch vụ ngoài gửi vào
 
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Test scheduled trigger
         run: |
