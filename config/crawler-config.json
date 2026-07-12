@@ -3,7 +3,7 @@
   "slug" : "quy-bi-chi-chu",
   "fromChapter" : 1,
   "toChapter" : 50,
-  "nextChapter" : 754,
+  "nextChapter" : 49,
   "batchSize" : 50,
   "requestDelayMillis" : 9500,
   "enabled" : true
