@@ -491,9 +491,73 @@ public class MultiChapterCrawler {
             log("ADB pull: " + oneLine(pullOutput));
         }
 
-        return parseXml(LOCAL_XML_PATH);
-    }
+        Document document = parseXml(LOCAL_XML_PATH);
 
+        if (clickOkPopupIfPresent(document)) {
+            sleep(800);
+
+            dumpOutput = runAdbWithRetry(
+                    3,
+                    "shell",
+                    "uiautomator",
+                    "dump",
+                    REMOTE_XML_PATH
+            );
+
+            if (!dumpOutput.isBlank()) {
+                log("UI dump sau khi đóng popup: " + oneLine(dumpOutput));
+            }
+
+            pullOutput = runAdbWithRetry(
+                    3,
+                    "pull",
+                    REMOTE_XML_PATH,
+                    LOCAL_XML_PATH.toAbsolutePath().toString()
+            );
+
+            if (!pullOutput.isBlank()) {
+                log("ADB pull sau khi đóng popup: " + oneLine(pullOutput));
+            }
+
+            document = parseXml(LOCAL_XML_PATH);
+        }
+
+        return document;
+    }
+    private boolean clickOkPopupIfPresent(Document document)
+            throws IOException, InterruptedException {
+
+        NodeList nodes = document.getElementsByTagName("node");
+
+        for (int i = 0; i < nodes.getLength(); i++) {
+            Element element = (Element) nodes.item(i);
+
+            String text = element.getAttribute("text");
+            String resourceId = element.getAttribute("resource-id");
+
+            boolean isOkButton =
+                    "OK".equalsIgnoreCase(text)
+                            && "android:id/button1".equals(resourceId);
+
+            if (!isOkButton) {
+                continue;
+            }
+
+            int[] center = extractCenter(element.getAttribute("bounds"));
+
+            if (center == null) {
+                continue;
+            }
+
+            log("Phát hiện popup nghỉ mắt. Bấm OK tại: "
+                    + center[0] + ", " + center[1]);
+
+            tap(center[0], center[1]);
+            return true;
+        }
+
+        return false;
+    }
     private String extractStory(Document document) {
         NodeList nodes = document.getElementsByTagName("node");
 
