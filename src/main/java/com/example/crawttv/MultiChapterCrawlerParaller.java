@@ -77,7 +77,7 @@ public class MultiChapterCrawlerParaller {
             ).replaceAll("[^a-zA-Z0-9._-]+", "_");
 
     /** Số chương tối đa muốn lấy trong một lần chạy. */
-    private static final int MAX_CHAPTERS = 5;
+    private static final int MAX_CHAPTERS = 50;
 
     /**
      * Nếu chương trình không tìm được nút "Chương sau" trong XML:
@@ -401,7 +401,7 @@ public class MultiChapterCrawlerParaller {
 //                break;
 //            }
 //
-//            boolean changed = waitUntilContentChanges(contentHash);
+//            boolean changed = waitUntilContentChangeswaitUntilContentChanges(contentHash);
 //
 //            if (!changed) {
 //                log("Nội dung không thay đổi sau khi chuyển chương.");
@@ -632,7 +632,44 @@ public class MultiChapterCrawlerParaller {
         return false;
     }
 
+//    private Document dumpAndReadHierarchy() throws Exception {
+//        String dumpOutput = runAdbWithRetry(
+//                3,
+//                "shell",
+//                "uiautomator",
+//                "dump",
+//                REMOTE_XML_PATH
+//        );
+//
+//        if (!dumpOutput.isBlank()) {
+//            log("UI dump: " + oneLine(dumpOutput));
+//        }
+//
+//        String pullOutput = runAdbWithRetry(
+//                3,
+//                "pull",
+//                REMOTE_XML_PATH,
+//                LOCAL_XML_PATH.toAbsolutePath().toString()
+//        );
+//
+//        if (!pullOutput.isBlank()) {
+//            log("ADB pull: " + oneLine(pullOutput));
+//        }
+//
+//        return parseXml(LOCAL_XML_PATH);
+//    }
     private Document dumpAndReadHierarchy() throws Exception {
+        Document document = dumpPullAndParseXml();
+
+        if (clickOkPopupIfPresent(document)) {
+            sleep(800);
+            document = dumpPullAndParseXml();
+        }
+
+        return document;
+    }
+
+    private Document dumpPullAndParseXml() throws Exception {
         String dumpOutput = runAdbWithRetry(
                 3,
                 "shell",
@@ -681,7 +718,40 @@ public class MultiChapterCrawlerParaller {
                 "Không tìm thấy nội dung truyện trong resource-id tvContent."
         );
     }
+    private boolean clickOkPopupIfPresent(Document document)
+            throws IOException, InterruptedException {
 
+        NodeList nodes = document.getElementsByTagName("node");
+
+        for (int i = 0; i < nodes.getLength(); i++) {
+            Element element = (Element) nodes.item(i);
+
+            String text = element.getAttribute("text");
+            String resourceId = element.getAttribute("resource-id");
+
+            boolean isOkButton =
+                    "OK".equalsIgnoreCase(text)
+                            && "android:id/button1".equals(resourceId);
+
+            if (!isOkButton) {
+                continue;
+            }
+
+            int[] center = extractCenter(element.getAttribute("bounds"));
+
+            if (center == null) {
+                continue;
+            }
+
+            log("Phát hiện popup nghỉ mắt. Bấm OK tại: "
+                    + center[0] + ", " + center[1]);
+
+            tap(center[0], center[1]);
+            return true;
+        }
+
+        return false;
+    }
     private String cleanStory(String text) {
         String result = text
                 .replace('\u00A0', ' ')
