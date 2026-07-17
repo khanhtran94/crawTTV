@@ -56,8 +56,11 @@ public class MultiChapterCrawler {
      *
      * Đặt chuỗi rỗng "" để chương trình tự chọn khi chỉ có đúng một thiết bị.
      */
+//    private static final String DEVICE_SERIAL =
+//            "adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp";
+
     private static final String DEVICE_SERIAL =
-            "adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp";
+            "emulator-5554";
 
     /** Số chương tối đa muốn lấy trong một lần chạy. */
     private static final int MAX_CHAPTERS = 100;
@@ -115,7 +118,7 @@ public class MultiChapterCrawler {
      * Số lần vuốt dọc liên tiếp mỗi lần thử chuyển chương.
      * App cuộn dọc thường cần nhiều lần vuốt mới hết một chương.
      */
-    private static final int VERTICAL_SWIPE_REPEAT_COUNT = 6;
+    private static final int VERTICAL_SWIPE_REPEAT_COUNT = 8;
 
     /** Khoảng nghỉ giữa các lần vuốt dọc liên tiếp. */
     private static final long VERTICAL_SWIPE_INTERVAL_MS = 500;
@@ -126,7 +129,11 @@ public class MultiChapterCrawler {
 
     /** Chờ tối đa bao lâu để chương mới tải xong. */
     private static final long CHAPTER_CHANGE_TIMEOUT_MS = 20_000;
+    /** Mỗi lần chờ chương mới tải tối đa 1 phút. */
+    private static final long CHAPTER_CHANGE_WAIT_BEFORE_RETRY_MS = 60_000;
 
+    /** Nếu chờ 1 phút chưa đổi chương thì vuốt lại tối đa bao nhiêu đợt. */
+    private static final int MAX_CHAPTER_CHANGE_RETRY_SCROLLS = 5;
     /** Khoảng nghỉ giữa các lần kiểm tra nội dung. */
     private static final long POLL_INTERVAL_MS = 1_000;
 
@@ -426,29 +433,45 @@ public class MultiChapterCrawler {
     private boolean waitUntilContentChanges(String previousHash)
             throws Exception {
 
-        long startedAt = System.currentTimeMillis();
+        for (int retry = 1; retry <= MAX_CHAPTER_CHANGE_RETRY_SCROLLS; retry++) {
+            log("Chờ chương mới tải, lần " + retry
+                    + "/" + MAX_CHAPTER_CHANGE_RETRY_SCROLLS
+                    + " trong 1 phút...");
 
-        while (System.currentTimeMillis() - startedAt
-                < CHAPTER_CHANGE_TIMEOUT_MS) {
+            long startedAt = System.currentTimeMillis();
 
-            sleep(POLL_INTERVAL_MS);
+            while (System.currentTimeMillis() - startedAt
+                    < CHAPTER_CHANGE_WAIT_BEFORE_RETRY_MS) {
 
-            try {
-                Document document = dumpAndReadHierarchy();
-                String currentStory = cleanStory(extractStory(document));
-                String currentHash = sha256(currentStory);
+                sleep(POLL_INTERVAL_MS);
 
-                if (!currentHash.equals(previousHash)) {
-                    log("Đã nhận được nội dung chương mới.");
-                    return true;
+                try {
+                    Document document = dumpAndReadHierarchy();
+                    String currentStory = cleanStory(extractStory(document));
+                    String currentHash = sha256(currentStory);
+
+                    if (!currentHash.equals(previousHash)) {
+                        log("Đã nhận được nội dung chương mới.");
+                        return true;
+                    }
+
+                    log("Chưa đổi chương, tiếp tục chờ...");
+
+                } catch (Exception exception) {
+                    log("UI đang thay đổi hoặc popup vừa đóng, tiếp tục chờ...");
                 }
+            }
 
-                log("Đang chờ chương mới tải...");
+            log("Đã chờ 1 phút nhưng chương chưa đổi.");
 
-                // Nếu app dùng kiểu cuộn dọc, nội dung có thể chưa đổi vì
-                // chưa cuộn tới hết chương. Vuốt dọc thêm một lần nữa trong
-                // lúc chờ để tiếp tục đẩy tới chương kế.
-                if (SWIPE_MODE == SwipeMode.VERTICAL_SCROLL) {
+            if (retry < MAX_CHAPTER_CHANGE_RETRY_SCROLLS
+                    && SWIPE_MODE == SwipeMode.VERTICAL_SCROLL) {
+
+                log("Vuốt lại thêm "
+                        + VERTICAL_SWIPE_REPEAT_COUNT
+                        + " lần để thử tải chương mới...");
+
+                for (int i = 0; i < VERTICAL_SWIPE_REPEAT_COUNT; i++) {
                     swipe(
                             VERTICAL_SWIPE_X,
                             VERTICAL_SWIPE_START_Y,
@@ -456,11 +479,16 @@ public class MultiChapterCrawler {
                             VERTICAL_SWIPE_END_Y,
                             VERTICAL_SWIPE_DURATION_MS
                     );
-                }
 
-            } catch (Exception exception) {
-                // Khi app đang chuyển màn hình, hierarchy có thể tạm thời chưa đầy đủ.
-                log("UI đang thay đổi, tiếp tục chờ...");
+                    sleep(VERTICAL_SWIPE_INTERVAL_MS);
+
+                    try {
+                        Document document = dumpAndReadHierarchy();
+                        clickOkPopupIfPresent(document);
+                    } catch (Exception exception) {
+                        log("Không dump được UI sau khi vuốt, bỏ qua và tiếp tục...");
+                    }
+                }
             }
         }
 
