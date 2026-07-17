@@ -198,6 +198,58 @@ public class MultiChapterCrawlerParaller {
     private MultiChapterCrawlerParaller(String deviceSerial) {
         this.deviceSerial = deviceSerial;
     }
+    /** Số lần vuốt tối đa để cố đi hết một chương dài. */
+    private static final int MAX_SCROLLS_TO_END_CHAPTER = 250;
+
+    /** Cứ bao nhiêu lần vuốt thì dump XML kiểm tra đã sang chương mới chưa. */
+    private static final int CHECK_AFTER_SCROLL_COUNT = 5;
+
+    private boolean scrollUntilChapterChanges(String previousHash)
+            throws Exception {
+
+        log("Bắt đầu vuốt cho tới khi sang chương mới...");
+
+        for (int scrollCount = 1;
+             scrollCount <= MAX_SCROLLS_TO_END_CHAPTER;
+             scrollCount++) {
+
+            swipe(
+                    VERTICAL_SWIPE_X,
+                    VERTICAL_SWIPE_START_Y,
+                    VERTICAL_SWIPE_X,
+                    VERTICAL_SWIPE_END_Y,
+                    VERTICAL_SWIPE_DURATION_MS
+            );
+
+            sleep(VERTICAL_SWIPE_INTERVAL_MS);
+
+            if (scrollCount % CHECK_AFTER_SCROLL_COUNT != 0) {
+                continue;
+            }
+
+            log("Đã vuốt " + scrollCount + " lần, kiểm tra chương...");
+
+            try {
+                Document document = dumpAndReadHierarchy();
+
+                String currentStory = cleanStory(extractStory(document));
+                String currentHash = sha256(currentStory);
+
+                if (!currentHash.equals(previousHash)) {
+                    log("Đã sang chương mới sau " + scrollCount + " lần vuốt.");
+                    return true;
+                }
+
+            } catch (Exception exception) {
+                log("Chưa kiểm tra được UI, tiếp tục vuốt...");
+            }
+        }
+
+        log("Đã vuốt tối đa " + MAX_SCROLLS_TO_END_CHAPTER
+                + " lần nhưng vẫn chưa sang chương mới.");
+
+        return false;
+    }
 
     public static void main(String[] args) {
         try {
@@ -342,18 +394,38 @@ public class MultiChapterCrawlerParaller {
                 break;
             }
 
-            boolean moved = moveToNextChapter(document);
+//            boolean moved = moveToNextChapter(document);
+//
+//            if (!moved) {
+//                log("Không thể thực hiện thao tác chuyển chương. Dừng crawler.");
+//                break;
+//            }
+//
+//            boolean changed = waitUntilContentChanges(contentHash);
+//
+//            if (!changed) {
+//                log("Nội dung không thay đổi sau khi chuyển chương.");
+//                log("Có thể app đang ở chương cuối hoặc tọa độ/thao tác chuyển chương chưa đúng.");
+//                break;
+//            }
+            boolean changed;
 
-            if (!moved) {
-                log("Không thể thực hiện thao tác chuyển chương. Dừng crawler.");
-                break;
+            if (SWIPE_MODE == SwipeMode.VERTICAL_SCROLL) {
+                changed = scrollUntilChapterChanges(contentHash);
+            } else {
+                boolean moved = moveToNextChapter(document);
+
+                if (!moved) {
+                    log("Không thể thực hiện thao tác chuyển chương. Dừng crawler.");
+                    break;
+                }
+
+                changed = waitUntilContentChanges(contentHash);
             }
 
-            boolean changed = waitUntilContentChanges(contentHash);
-
             if (!changed) {
-                log("Nội dung không thay đổi sau khi chuyển chương.");
-                log("Có thể app đang ở chương cuối hoặc tọa độ/thao tác chuyển chương chưa đúng.");
+                log("Không thể sang chương mới.");
+                log("Có thể chương quá dài, app load chậm, hoặc đã tới chương cuối.");
                 break;
             }
         }
