@@ -77,7 +77,8 @@ public class MultiChapterCrawlerParaller {
             ).replaceAll("[^a-zA-Z0-9._-]+", "_");
 
     /** Số chương tối đa muốn lấy trong một lần chạy. */
-    private static final int MAX_CHAPTERS = 50;
+    private static final int MAX_CHAPTERS = 100
+            ;
 
     /**
      * Nếu chương trình không tìm được nút "Chương sau" trong XML:
@@ -809,9 +810,10 @@ public class MultiChapterCrawlerParaller {
         String title = findFirstNonBlankLine(content);
         Integer chapterNumber = findChapterNumber(title);
 
-        String numberPart = chapterNumber != null
-                ? String.format("%06d", chapterNumber)
-                : String.format("%06d", sequence);
+        String numberPart = LocalDateTime.now()
+                .format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss_SSS"))
+                + "_"
+                + String.format("%04d", sequence);
 
         String safeTitle = sanitizeFileName(title);
 
