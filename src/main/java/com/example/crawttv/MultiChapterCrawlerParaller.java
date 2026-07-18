@@ -204,6 +204,17 @@ public class MultiChapterCrawlerParaller {
 
     /** Cứ bao nhiêu lần vuốt thì dump XML kiểm tra đã sang chương mới chưa. */
     private static final int CHECK_AFTER_SCROLL_COUNT = 5;
+    /** Vuốt xuống để xử lý màn hình loading ở cuối chương. */
+    private static final int DOWN_SWIPE_X = 360;
+    private static final int DOWN_SWIPE_START_Y = 280;
+    private static final int DOWN_SWIPE_END_Y = 1050;
+    private static final int DOWN_SWIPE_DURATION_MS = 500;
+
+    /** Khi gặp màn loading cuối chương thì đợi bao lâu. */
+    private static final long BOTTOM_LOADING_WAIT_MS = 10_000;
+
+    /** Số lần vuốt xuống khi bị kẹt loading cuối chương. */
+    private static final int DOWN_SWIPE_REPEAT_COUNT = 2;
 
     private boolean scrollUntilChapterChanges(String previousHash)
             throws Exception {
@@ -251,7 +262,36 @@ public class MultiChapterCrawlerParaller {
 
         return false;
     }
+    private void handleBottomLoadingStuck()
+            throws IOException, InterruptedException {
 
+        log("Có thể đang kẹt ở màn loading cuối chương.");
+        log("Vuốt lên 1 nhịp, đợi 10s, rồi vuốt xuống 2 lần...");
+
+        // Vuốt lên 1 nhịp
+        swipe(
+                VERTICAL_SWIPE_X,
+                VERTICAL_SWIPE_START_Y,
+                VERTICAL_SWIPE_X,
+                VERTICAL_SWIPE_END_Y,
+                VERTICAL_SWIPE_DURATION_MS
+        );
+
+        sleep(BOTTOM_LOADING_WAIT_MS);
+
+        // Vuốt xuống 2 lần
+        for (int i = 0; i < DOWN_SWIPE_REPEAT_COUNT; i++) {
+            swipe(
+                    DOWN_SWIPE_X,
+                    DOWN_SWIPE_START_Y,
+                    DOWN_SWIPE_X,
+                    DOWN_SWIPE_END_Y,
+                    DOWN_SWIPE_DURATION_MS
+            );
+
+            sleep(800);
+        }
+    }
     public static void main(String[] args) {
         try {
             if (DEVICE_SERIAL == null || DEVICE_SERIAL.isBlank()) {
