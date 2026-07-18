@@ -203,7 +203,7 @@ public class MultiChapterCrawlerParaller {
     private static final int MAX_SCROLLS_TO_END_CHAPTER = 250;
 
     /** Cứ bao nhiêu lần vuốt thì dump XML kiểm tra đã sang chương mới chưa. */
-    private static final int CHECK_AFTER_SCROLL_COUNT = 5;
+    private static final int CHECK_AFTER_SCROLL_COUNT = 8;
     /** Vuốt xuống để xử lý màn hình loading ở cuối chương. */
     private static final int DOWN_SWIPE_X = 360;
     private static final int DOWN_SWIPE_START_Y = 280;
@@ -252,8 +252,12 @@ public class MultiChapterCrawlerParaller {
                     return true;
                 }
 
+                log("Chưa sang chương mới, thử xử lý kẹt loading cuối chương...");
+                handleBottomLoadingStuck();
+
             } catch (Exception exception) {
-                log("Chưa kiểm tra được UI, tiếp tục vuốt...");
+                log("Không lấy được nội dung. Có thể đang ở màn loading cuối chương.");
+                handleBottomLoadingStuck();
             }
         }
 
@@ -289,7 +293,7 @@ public class MultiChapterCrawlerParaller {
                     DOWN_SWIPE_DURATION_MS
             );
 
-            sleep(800);
+            sleep(BOTTOM_LOADING_WAIT_MS);
         }
     }
     public static void main(String[] args) {
