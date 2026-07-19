@@ -52,8 +52,8 @@ public class MultiChapterCrawlerParaller {
      * Mỗi emulator cần đang mở sẵn app ở truyện/chương bắt đầu khác nhau.
      */
     private static final List<String> PARALLEL_DEVICE_SERIALS = List.of(
-            "emulator-5554",
-            "emulator-5556"
+            "emulator-5554"
+//            "emulator-5556"
     );
 
     /**
