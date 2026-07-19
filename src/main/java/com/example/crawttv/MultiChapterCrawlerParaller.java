@@ -15,11 +15,7 @@ import java.security.MessageDigest;
 import java.text.Normalizer;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.stream.Collectors;
 import java.util.regex.Pattern;
@@ -203,7 +199,7 @@ public class MultiChapterCrawlerParaller {
     private static final int MAX_SCROLLS_TO_END_CHAPTER = 250;
 
     /** Cứ bao nhiêu lần vuốt thì dump XML kiểm tra đã sang chương mới chưa. */
-    private static final int CHECK_AFTER_SCROLL_COUNT = 8;
+    private static final int CHECK_AFTER_SCROLL_COUNT = 13;
     /** Vuốt xuống để xử lý màn hình loading ở cuối chương. */
     private static final int DOWN_SWIPE_X = 360;
     private static final int DOWN_SWIPE_START_Y = 280;
@@ -1157,18 +1153,22 @@ public class MultiChapterCrawlerParaller {
         }
     }
 
-    private static String sanitizeFileName(String value) {
-        String normalized = Normalizer.normalize(
-                value,
-                Normalizer.Form.NFD
-        );
+//    private static String sanitizeFileName(String value) {
+//        String normalized = Normalizer.normalize(
+//                value,
+//                Normalizer.Form.NFD
+//        );
+//
+//        return normalized
+//                .replaceAll("\\p{M}", "")
+//                .replaceAll("[\\\\/:*?\"<>|]+", "_")
+//                .replaceAll("[^a-zA-Z0-9._ -]+", "_")
+//                .replaceAll("[\\s_]+", "_")
+//                .replaceAll("^_+|_+$", "");
+//    }
 
-        return normalized
-                .replaceAll("\\p{M}", "")
-                .replaceAll("[\\\\/:*?\"<>|]+", "_")
-                .replaceAll("[^a-zA-Z0-9._ -]+", "_")
-                .replaceAll("[\\s_]+", "_")
-                .replaceAll("^_+|_+$", "");
+    private static String sanitizeFileName(String value) {
+        return slugifyFilename(value);
     }
 
     private static String normalizeSearchText(String value) {
@@ -1181,6 +1181,60 @@ public class MultiChapterCrawlerParaller {
                 .replaceAll("\\p{M}", "")
                 .toLowerCase()
                 .trim();
+    }
+
+    private static String slugifyFilename(String text) {
+        if (text == null || text.isBlank()) {
+            return "noi-dung";
+        }
+
+        String result = removeVietnameseAccents(text)
+                .strip()
+                .toLowerCase(Locale.ROOT);
+
+        // Đổi underscore thành khoảng trắng để lát nữa thành dấu -
+        result = result.replace('_', ' ');
+
+        // Xóa ký tự không phù hợp với tên file
+        result = result.replaceAll("[^a-z0-9\\s-]", "");
+
+        // Đổi khoảng trắng thành dấu -
+        result = result.replaceAll("\\s+", "-");
+
+        // Xóa nhiều dấu - liên tiếp
+        result = result.replaceAll("-+", "-");
+
+        // Xóa dấu - ở đầu/cuối
+        result = result.replaceAll("^-+|-+$", "");
+
+        if (result.isBlank()) {
+            return "noi-dung";
+        }
+
+        if (result.length() > 90) {
+            result = result.substring(0, 90)
+                    .replaceAll("-+$", "");
+        }
+
+        return result.isBlank() ? "noi-dung" : result;
+    }
+
+    private static String removeVietnameseAccents(String text) {
+        if (text == null || text.isBlank()) {
+            return "";
+        }
+
+        // Normalizer không tự đổi Đ/đ, nên xử lý riêng
+        String result = text
+                .replace('Đ', 'D')
+                .replace('đ', 'd');
+
+        result = Normalizer.normalize(result, Normalizer.Form.NFD);
+
+        // Xóa dấu tiếng Việt: ê -> e, ă -> a, ư -> u...
+        result = result.replaceAll("\\p{M}+", "");
+
+        return result;
     }
 
     private static String sha256(String content) throws Exception {
