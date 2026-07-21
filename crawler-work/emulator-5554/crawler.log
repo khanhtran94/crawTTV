@@ -31088,3 +31088,26 @@ error: closed
 [07:35:15] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
 [07:35:15] Có th? ?ang k?t ? màn loading cu?i ch??ng.
 [07:35:15] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[20:38:39] ==============================================
+[20:38:39] B?T ??U CRAWL TRUY?N
+[20:38:39] Job: emulator-5554
+[20:38:39] Thi?t b?: emulator-5554
+[20:38:39] S? ch??ng t?i ?a: 400
+[20:38:39] Th? m?c k?t qu?: F:\craw\crawTtv\stories\emulator-5554
+[20:38:39] ==============================================
+[20:38:39] 
+[20:38:39] ========== L?N ??C 1 ==========
+[20:38:41] UI dump: ERROR: null root node returned by UiTestAutomationBridge.
+[20:38:41] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 7.1 MB/s (34339 bytes in 0.005s)
+[20:38:41] ?ã l?u: F:\craw\crawTtv\stories\emulator-5554\20260721_203841_792_0001_chuong-60-thien-dien-chu-nguyen.txt
+[20:38:41] S? ký t?: 15118
+[20:38:41] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[22:21:50] ==============================================
+[22:21:50] B?T ??U CRAWL TRUY?N
+[22:21:50] Job: emulator-5554
+[22:21:50] Thi?t b?: emulator-5554
+[22:21:50] S? ch??ng t?i ?a: 400
+[22:21:50] Th? m?c k?t qu?: F:\craw\crawTtv\stories\emulator-5554
+[22:21:50] ==============================================
+[22:21:50] 
+[22:21:50] ========== L?N ??C 1 ==========
