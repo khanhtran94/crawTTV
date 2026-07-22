@@ -73,7 +73,7 @@ public class MultiChapterCrawlerParaller {
             ).replaceAll("[^a-zA-Z0-9._-]+", "_");
 
     /** Số chương tối đa muốn lấy trong một lần chạy. */
-    private static final int MAX_CHAPTERS = 400
+    private static final int MAX_CHAPTERS = 600
             ;
 
     /**
