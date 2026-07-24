@@ -52,8 +52,9 @@ public class MTCMultiChapterCrawlerParaller {
      * Mỗi emulator cần đang mở sẵn app ở truyện/chương bắt đầu khác nhau.
      */
     private static final List<String> PARALLEL_DEVICE_SERIALS = List.of(
-            "emulator-5554"
+//            "emulator-5554"
 //            "emulator-5556"
+            "adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp"
     );
 
     /**
@@ -221,13 +222,7 @@ public class MTCMultiChapterCrawlerParaller {
              scrollCount <= MAX_SCROLLS_TO_END_CHAPTER;
              scrollCount++) {
 
-            swipe(
-                    VERTICAL_SWIPE_X,
-                    VERTICAL_SWIPE_START_Y,
-                    VERTICAL_SWIPE_X,
-                    VERTICAL_SWIPE_END_Y,
-                    VERTICAL_SWIPE_DURATION_MS
-            );
+            realSwipe(VERTICAL_SWIPE_X, VERTICAL_SWIPE_START_Y, VERTICAL_SWIPE_X, VERTICAL_SWIPE_END_Y, 10, 30);
 
             sleep(VERTICAL_SWIPE_INTERVAL_MS);
 
@@ -269,13 +264,7 @@ public class MTCMultiChapterCrawlerParaller {
         log("Vuốt lên 1 nhịp, đợi 10s, rồi vuốt xuống 2 lần...");
 
         // Vuốt lên 1 nhịp
-        swipe(
-                VERTICAL_SWIPE_X,
-                VERTICAL_SWIPE_START_Y,
-                VERTICAL_SWIPE_X,
-                VERTICAL_SWIPE_END_Y,
-                VERTICAL_SWIPE_DURATION_MS
-        );
+        realSwipe(VERTICAL_SWIPE_X, VERTICAL_SWIPE_START_Y, VERTICAL_SWIPE_X, VERTICAL_SWIPE_END_Y, 10, 30);
 
         sleep(BOTTOM_LOADING_WAIT_MS);
 
@@ -516,13 +505,7 @@ public class MTCMultiChapterCrawlerParaller {
                         + " lần để cuộn hết chương hiện tại...");
 
                 for (int i = 0; i < VERTICAL_SWIPE_REPEAT_COUNT; i++) {
-                    swipe(
-                            VERTICAL_SWIPE_X,
-                            VERTICAL_SWIPE_START_Y,
-                            VERTICAL_SWIPE_X,
-                            VERTICAL_SWIPE_END_Y,
-                            VERTICAL_SWIPE_DURATION_MS
-                    );
+                    realSwipe(VERTICAL_SWIPE_X, VERTICAL_SWIPE_START_Y, VERTICAL_SWIPE_X, VERTICAL_SWIPE_END_Y, 10, 30);
                     sleep(VERTICAL_SWIPE_INTERVAL_MS);
                 }
             } else {
@@ -740,24 +723,6 @@ public class MTCMultiChapterCrawlerParaller {
     private String extractStory(Document document) {
         NodeList nodes = document.getElementsByTagName("node");
 
-        // Cách 1: app Tàng Thư Viện cũ, nội dung nằm trong text của tvContent
-        for (int i = 0; i < nodes.getLength(); i++) {
-            Element element = (Element) nodes.item(i);
-
-            String resourceId = element.getAttribute("resource-id");
-            String text = element.getAttribute("text");
-
-            if ((CONTENT_RESOURCE_ID.equals(resourceId)
-                    || resourceId.endsWith(":id/tvContent"))
-                    && text != null
-                    && !text.isBlank()) {
-
-                return text;
-            }
-        }
-
-        // Cách 2: app Mê Truyện / NovelFever,
-        // nội dung nằm trong content-desc của android.view.View
         String bestContent = "";
 
         for (int i = 0; i < nodes.getLength(); i++) {
@@ -778,13 +743,6 @@ public class MTCMultiChapterCrawlerParaller {
                             || contentDesc.startsWith("Chuong ")
                             || contentDesc.contains("\n\n");
 
-            /*
-             * XML Mê Truyện có nhiều content-desc:
-             * - Header: ngắn, chỉ có tên chương + %
-             * - Nội dung chương: rất dài
-             *
-             * Vì vậy lấy content-desc dài nhất.
-             */
             if (isAndroidView
                     && looksLikeChapter
                     && contentDesc.length() > bestContent.length()) {
@@ -798,7 +756,7 @@ public class MTCMultiChapterCrawlerParaller {
         }
 
         throw new IllegalStateException(
-                "Không tìm thấy nội dung truyện trong tvContent hoặc content-desc."
+                "Không tìm thấy nội dung truyện Mê Truyện trong content-desc."
         );
     }
     private boolean clickOkPopupIfPresent(Document document)
@@ -1322,5 +1280,39 @@ public class MTCMultiChapterCrawlerParaller {
                 "[" + LocalDateTime.now().format(LOG_TIME_FORMAT) + "] "
                         + message
         );
+    }
+
+    /**
+     * Vuốt thật bằng chuỗi motionevent (DOWN -> nhiều MOVE -> UP) thay vì
+     * lệnh "input swipe" một lần. Cách này mô phỏng ngón tay chạm và kéo
+     * liên tục, tránh bị app hiểu nhầm thành một cú chạm (tap) làm hiện
+     * thanh điều khiển/cài đặt.
+     */
+    private void realSwipe(
+            int startX,
+            int startY,
+            int endX,
+            int endY,
+            int steps,
+            long stepDelayMs
+    ) throws IOException, InterruptedException {
+
+        runAdb("shell", "input", "motionevent", "DOWN",
+                String.valueOf(startX), String.valueOf(startY));
+
+        sleep(stepDelayMs);
+
+        for (int i = 1; i <= steps; i++) {
+            int x = startX + (endX - startX) * i / steps;
+            int y = startY + (endY - startY) * i / steps;
+
+            runAdb("shell", "input", "motionevent", "MOVE",
+                    String.valueOf(x), String.valueOf(y));
+
+            sleep(stepDelayMs);
+        }
+
+        runAdb("shell", "input", "motionevent", "UP",
+                String.valueOf(endX), String.valueOf(endY));
     }
 }
