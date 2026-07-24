@@ -17,8 +17,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.regex.Matcher;
-import java.util.stream.Collectors;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 /**
  * Crawl nhiều chương truyện từ app Android thông qua ADB + UIAutomator.
@@ -33,7 +33,7 @@ import java.util.regex.Pattern;
  * - Mỗi chương được lưu riêng trong thư mục stories/.
  * - Tất cả chương được ghép thêm vào stories/all_chapters.txt.
  */
-public class MultiChapterCrawlerParaller {
+public class MTCMultiChapterCrawlerParaller {
 
     // =========================================================
     // CẤU HÌNH — CHỈNH PHẦN NÀY RỒI BẤM RUN
@@ -192,7 +192,7 @@ public class MultiChapterCrawlerParaller {
     private final String deviceSerial;
     private final Set<String> collectedHashes = new HashSet<>();
 
-    private MultiChapterCrawlerParaller(String deviceSerial) {
+    private MTCMultiChapterCrawlerParaller(String deviceSerial) {
         this.deviceSerial = deviceSerial;
     }
     /** Số lần vuốt tối đa để cố đi hết một chương dài. */
@@ -309,7 +309,7 @@ public class MultiChapterCrawlerParaller {
             log("Thư mục kết quả: " + OUTPUT_DIRECTORY.toAbsolutePath());
             log("==============================================");
 
-            MultiChapterCrawlerParaller crawler = new MultiChapterCrawlerParaller(serial);
+            MTCMultiChapterCrawlerParaller crawler = new MTCMultiChapterCrawlerParaller(serial);
             crawler.crawl();
 
         } catch (Exception exception) {
@@ -333,7 +333,7 @@ public class MultiChapterCrawlerParaller {
         ).toString();
 
         String classPath = System.getProperty("java.class.path");
-        String className = MultiChapterCrawlerParaller.class.getName();
+        String className = MTCMultiChapterCrawlerParaller.class.getName();
 
         List<Process> processes = new ArrayList<>();
 
