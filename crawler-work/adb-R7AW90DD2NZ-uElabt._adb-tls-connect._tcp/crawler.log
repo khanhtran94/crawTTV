@@ -374,3 +374,527 @@ java.lang.IllegalStateException: Không tìm th?y n?i dung truy?n Mê Truy?n trong 
 	at com.example.crawttv.MTCMultiChapterCrawlerParaller.extractStory(MTCMultiChapterCrawlerParaller.java:758)
 	at com.example.crawttv.MTCMultiChapterCrawlerParaller.crawl(MTCMultiChapterCrawlerParaller.java:399)
 	at com.example.crawttv.MTCMultiChapterCrawlerParaller.main(MTCMultiChapterCrawlerParaller.java:302)
+[22:57:26] ==============================================
+[22:57:26] B?T ??U CRAWL TRUY?N
+[22:57:26] Job: adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp
+[22:57:26] Thi?t b?: adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp
+[22:57:26] S? ch??ng t?i ?a: 600
+[22:57:26] Th? m?c k?t qu?: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp
+[22:57:26] ==============================================
+[22:57:26] 
+[22:57:26] ========== L?N ??C 1 ==========
+[22:57:29] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[22:57:29] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.7 MB/s (18227 bytes in 0.010s)
+[22:57:29] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_225729_822_0001_chuong-20-chuc-nghiep-gia-con-duong-chuc-giai.txt
+[22:57:29] S? ký t?: 8920
+[22:57:29] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[22:58:02] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[22:58:05] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[22:58:05] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.5 MB/s (18228 bytes in 0.012s)
+[22:58:05] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[22:58:05] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[22:58:05] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[22:59:11] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[22:59:13] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[22:59:13] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.4 MB/s (17759 bytes in 0.012s)
+[22:59:13] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[22:59:13] 
+[22:59:13] ========== L?N ??C 2 ==========
+[22:59:16] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[22:59:16] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.3 MB/s (17759 bytes in 0.013s)
+[22:59:16] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_225916_417_0002_chuong-21-kiem-manh.txt
+[22:59:16] S? ký t?: 8833
+[22:59:16] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[22:59:49] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[22:59:52] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[22:59:52] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.9 MB/s (17760 bytes in 0.009s)
+[22:59:52] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[22:59:52] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[22:59:52] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:00:59] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:01:01] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:01:01] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.3 MB/s (17594 bytes in 0.013s)
+[23:01:01] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:01:01] 
+[23:01:01] ========== L?N ??C 3 ==========
+[23:01:04] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:01:04] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.6 MB/s (17594 bytes in 0.027s)
+[23:01:04] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_230104_385_0003_chuong-22-phap-thuat-lua-chon.txt
+[23:01:04] S? ký t?: 8442
+[23:01:04] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:01:38] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:01:40] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:01:40] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.7 MB/s (17595 bytes in 0.010s)
+[23:01:40] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:01:40] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:01:40] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:02:49] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:02:52] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:02:52] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.5 MB/s (19367 bytes in 0.013s)
+[23:02:52] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:02:52] 
+[23:02:52] ========== L?N ??C 4 ==========
+[23:02:54] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:02:54] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.6 MB/s (19367 bytes in 0.012s)
+[23:02:54] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_230254_830_0004_chuong-23-ma-phap-phi-dan.txt
+[23:02:54] S? ký t?: 9881
+[23:02:54] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:03:28] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:03:31] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:03:31] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.7 MB/s (19368 bytes in 0.011s)
+[23:03:31] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:03:31] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:03:31] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:04:37] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:04:40] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:04:40] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.1 MB/s (19368 bytes in 0.017s)
+[23:04:40] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:04:40] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:04:40] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:05:47] ?ã vu?t 39 l?n, ki?m tra ch??ng...
+[23:05:50] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:05:50] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 2.1 MB/s (18416 bytes in 0.008s)
+[23:05:50] ?ã sang ch??ng m?i sau 39 l?n vu?t.
+[23:05:50] 
+[23:05:50] ========== L?N ??C 5 ==========
+[23:05:52] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:05:52] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.6 MB/s (18416 bytes in 0.011s)
+[23:05:52] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_230552_805_0005_chuong-24-doc-nhat-ngan-tang-duoi-chot-mao-hiem-gia.txt
+[23:05:52] S? ký t?: 8966
+[23:05:52] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:06:27] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:06:29] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:06:29] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.2 MB/s (18417 bytes in 0.014s)
+[23:06:29] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:06:29] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:06:29] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:07:37] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:07:39] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:07:40] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.4 MB/s (17549 bytes in 0.012s)
+[23:07:40] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:07:40] 
+[23:07:40] ========== L?N ??C 6 ==========
+[23:07:42] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:07:42] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.8 MB/s (17549 bytes in 0.021s)
+[23:07:42] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_230742_509_0006_chuong-25-tang-duoi-chot-sinh-thai.txt
+[23:07:42] S? ký t?: 8658
+[23:07:42] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:08:15] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:08:18] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:08:18] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.6 MB/s (17550 bytes in 0.010s)
+[23:08:18] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:08:18] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:08:18] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:09:25] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:09:28] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:09:28] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 2.0 MB/s (19727 bytes in 0.009s)
+[23:09:28] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:09:28] 
+[23:09:28] ========== L?N ??C 7 ==========
+[23:09:30] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:09:30] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.9 MB/s (19727 bytes in 0.010s)
+[23:09:30] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_230930_699_0007_chuong-26-tinh-anh-tieu-doi.txt
+[23:09:30] S? ký t?: 10019
+[23:09:30] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:10:04] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:10:06] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:10:06] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.9 MB/s (19727 bytes in 0.010s)
+[23:10:06] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:10:06] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:10:06] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:11:14] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:11:17] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:11:17] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.2 MB/s (17030 bytes in 0.013s)
+[23:11:17] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:11:17] 
+[23:11:17] ========== L?N ??C 8 ==========
+[23:11:20] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:11:20] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.6 MB/s (17030 bytes in 0.010s)
+[23:11:20] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_231120_120_0008_chuong-27-giap-da.txt
+[23:11:20] S? ký t?: 8242
+[23:11:20] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:11:54] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:11:56] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:11:56] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.9 MB/s (17031 bytes in 0.017s)
+[23:11:56] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:11:56] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:11:56] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:13:04] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:13:06] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:13:06] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.5 MB/s (17818 bytes in 0.012s)
+[23:13:06] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:13:06] 
+[23:13:06] ========== L?N ??C 9 ==========
+[23:13:08] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:13:08] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.7 MB/s (17818 bytes in 0.024s)
+[23:13:08] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_231308_970_0009_chuong-28-dua-phep-tinh-bao.txt
+[23:13:08] S? ký t?: 8629
+[23:13:08] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:13:42] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:13:45] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:13:45] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.3 MB/s (17818 bytes in 0.013s)
+[23:13:45] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:13:45] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:13:45] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:14:53] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:14:56] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:14:56] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.5 MB/s (17306 bytes in 0.032s)
+[23:14:56] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:14:56] 
+[23:14:56] ========== L?N ??C 10 ==========
+[23:14:58] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:14:58] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.6 MB/s (17306 bytes in 0.028s)
+[23:14:58] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_231458_749_0010_chuong-29-lam-nguoi-so-hai.txt
+[23:14:58] S? ký t?: 8390
+[23:14:58] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:15:32] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:15:35] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:15:35] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.3 MB/s (17307 bytes in 0.013s)
+[23:15:35] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:15:35] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:15:35] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:16:41] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:16:44] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:16:44] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.7 MB/s (19723 bytes in 0.011s)
+[23:16:44] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:16:44] 
+[23:16:44] ========== L?N ??C 11 ==========
+[23:16:46] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:16:46] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.2 MB/s (19723 bytes in 0.016s)
+[23:16:46] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_231646_897_0011_chuong-30-chien-thuat-hach-tam.txt
+[23:16:46] S? ký t?: 9819
+[23:16:46] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:17:21] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:17:23] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:17:23] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.4 MB/s (19724 bytes in 0.013s)
+[23:17:23] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:17:23] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:17:23] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:18:31] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:18:34] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:18:34] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.9 MB/s (16920 bytes in 0.018s)
+[23:18:34] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:18:34] 
+[23:18:34] ========== L?N ??C 12 ==========
+[23:18:36] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:18:36] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.7 MB/s (16920 bytes in 0.009s)
+[23:18:36] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_231836_546_0012_chuong-31-mai-phuc.txt
+[23:18:36] S? ký t?: 8171
+[23:18:36] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:19:10] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:19:12] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:19:12] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.0 MB/s (16921 bytes in 0.016s)
+[23:19:12] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:19:12] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:19:12] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:20:20] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:20:23] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:20:23] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.8 MB/s (19468 bytes in 0.010s)
+[23:20:23] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:20:23] 
+[23:20:23] ========== L?N ??C 13 ==========
+[23:20:34] UI dump: ERROR: could not get idle state.
+[23:20:34] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.1 MB/s (19468 bytes in 0.016s)
+[23:20:34] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_232034_555_0013_chuong-32-hieu-suat-cao-phoi-hop.txt
+[23:20:34] S? ký t?: 9733
+[23:20:34] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:21:07] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:21:10] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:21:10] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.2 MB/s (16577 bytes in 0.013s)
+[23:21:10] ?ã sang ch??ng m?i sau 13 l?n vu?t.
+[23:21:10] 
+[23:21:10] ========== L?N ??C 14 ==========
+[23:21:13] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:21:13] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.6 MB/s (16577 bytes in 0.010s)
+[23:21:13] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_232113_361_0014_chuong-33-ta-den-giup-nguoi.txt
+[23:21:13] S? ký t?: 8173
+[23:21:13] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:21:46] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:21:49] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:21:50] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 2.1 MB/s (16578 bytes in 0.008s)
+[23:21:50] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:21:50] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:21:50] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:22:57] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:23:00] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:23:00] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.7 MB/s (19418 bytes in 0.011s)
+[23:23:00] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:23:00] 
+[23:23:00] ========== L?N ??C 15 ==========
+[23:23:02] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:23:03] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 2.1 MB/s (19418 bytes in 0.009s)
+[23:23:03] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_232303_053_0015_chuong-34-ve-nha.txt
+[23:23:03] S? ký t?: 9895
+[23:23:03] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:23:36] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:23:38] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:23:38] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.7 MB/s (19419 bytes in 0.011s)
+[23:23:38] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:23:38] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:23:38] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:24:45] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:24:48] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:24:48] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.7 MB/s (19419 bytes in 0.027s)
+[23:24:48] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:24:48] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:24:48] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:25:56] ?ã vu?t 39 l?n, ki?m tra ch??ng...
+[23:25:58] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:25:58] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.6 MB/s (17415 bytes in 0.010s)
+[23:25:58] ?ã sang ch??ng m?i sau 39 l?n vu?t.
+[23:25:58] 
+[23:25:58] ========== L?N ??C 16 ==========
+[23:26:01] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:26:01] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.5 MB/s (17415 bytes in 0.011s)
+[23:26:01] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_232601_147_0016_chuong-35-phong-bui-gai.txt
+[23:26:01] S? ký t?: 8313
+[23:26:01] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:26:35] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:26:37] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:26:37] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.1 MB/s (19451 bytes in 0.017s)
+[23:26:37] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:26:37] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:26:37] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:27:44] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:27:47] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:27:47] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.5 MB/s (17126 bytes in 0.011s)
+[23:27:47] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:27:47] 
+[23:27:47] ========== L?N ??C 17 ==========
+[23:27:50] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:27:50] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.5 MB/s (17126 bytes in 0.011s)
+[23:27:50] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_232750_249_0017_chuong-36-dac-biet-ma-luc.txt
+[23:27:50] S? ký t?: 8295
+[23:27:50] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:28:24] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:28:27] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:28:27] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.4 MB/s (17127 bytes in 0.012s)
+[23:28:27] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:28:27] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:28:27] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:29:34] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:29:37] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:29:37] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.6 MB/s (17432 bytes in 0.030s)
+[23:29:37] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:29:37] 
+[23:29:37] ========== L?N ??C 18 ==========
+[23:29:40] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:29:40] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.9 MB/s (17432 bytes in 0.009s)
+[23:29:40] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_232940_150_0018_chuong-37-ky-quai-thu-truong-cung-quai-thai.txt
+[23:29:40] S? ký t?: 8269
+[23:29:40] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:30:13] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:30:16] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:30:16] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.6 MB/s (17433 bytes in 0.011s)
+[23:30:16] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:30:16] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:30:16] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:31:23] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:31:26] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:31:26] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.7 MB/s (17190 bytes in 0.009s)
+[23:31:26] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:31:26] 
+[23:31:26] ========== L?N ??C 19 ==========
+[23:31:28] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:31:28] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 2.0 MB/s (17190 bytes in 0.008s)
+[23:31:28] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_233128_611_0019_chuong-38-thuc-luc-tang-len.txt
+[23:31:28] S? ký t?: 8352
+[23:31:28] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:32:02] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:32:04] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:32:04] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.3 MB/s (17191 bytes in 0.013s)
+[23:32:04] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:32:04] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:32:04] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:33:12] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:33:15] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:33:15] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.0 MB/s (16825 bytes in 0.017s)
+[23:33:15] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:33:15] 
+[23:33:15] ========== L?N ??C 20 ==========
+[23:33:17] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:33:17] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.5 MB/s (16825 bytes in 0.011s)
+[23:33:17] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_233317_779_0020_chuong-39-chat-nhay-slime.txt
+[23:33:17] S? ký t?: 7898
+[23:33:17] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:33:51] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:33:53] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:33:53] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.7 MB/s (16825 bytes in 0.010s)
+[23:33:53] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:33:53] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:33:53] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:35:00] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:35:03] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:35:03] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.9 MB/s (18388 bytes in 0.009s)
+[23:35:03] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:35:03] 
+[23:35:03] ========== L?N ??C 21 ==========
+[23:35:05] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:35:05] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.5 MB/s (18388 bytes in 0.011s)
+[23:35:05] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_233505_868_0021_chuong-40-do-giam-kinh-hi.txt
+[23:35:05] S? ký t?: 9478
+[23:35:05] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:35:39] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:35:42] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:35:42] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.7 MB/s (18389 bytes in 0.010s)
+[23:35:42] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:35:42] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:35:42] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:36:49] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:36:51] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:36:52] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.4 MB/s (17817 bytes in 0.012s)
+[23:36:52] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:36:52] 
+[23:36:52] ========== L?N ??C 22 ==========
+[23:36:54] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:36:54] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.4 MB/s (17817 bytes in 0.012s)
+[23:36:54] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_233654_394_0022_chuong-41-gap-dich-gia-yeu.txt
+[23:36:54] S? ký t?: 8824
+[23:36:54] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:37:28] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:37:30] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:37:30] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.2 MB/s (17818 bytes in 0.014s)
+[23:37:30] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:37:30] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:37:30] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:38:37] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:38:40] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:38:40] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.7 MB/s (18452 bytes in 0.010s)
+[23:38:40] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:38:40] 
+[23:38:40] ========== L?N ??C 23 ==========
+[23:38:43] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:38:43] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 2.2 MB/s (18452 bytes in 0.008s)
+[23:38:43] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_233843_255_0023_chuong-42-tien-cong-dai-hach.txt
+[23:38:43] S? ký t?: 9073
+[23:38:43] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:39:16] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:39:19] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:39:19] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.2 MB/s (18453 bytes in 0.015s)
+[23:39:19] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:39:19] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:39:19] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:40:27] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:40:29] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:40:29] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.8 MB/s (17615 bytes in 0.010s)
+[23:40:29] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:40:29] 
+[23:40:29] ========== L?N ??C 24 ==========
+[23:40:32] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:40:32] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 2.0 MB/s (17615 bytes in 0.008s)
+[23:40:32] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_234032_314_0024_chuong-43-gauss-than-the.txt
+[23:40:32] S? ký t?: 8892
+[23:40:32] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:41:05] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:41:07] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:41:08] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.5 MB/s (17616 bytes in 0.012s)
+[23:41:08] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:41:08] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:41:08] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:42:14] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:42:17] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:42:17] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.6 MB/s (16735 bytes in 0.010s)
+[23:42:17] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:42:17] 
+[23:42:17] ========== L?N ??C 25 ==========
+[23:42:19] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:42:19] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.5 MB/s (16735 bytes in 0.011s)
+[23:42:19] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_234219_643_0025_chuong-44-mua-xoi-xa-sau.txt
+[23:42:19] S? ký t?: 8244
+[23:42:19] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:42:52] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:42:55] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:42:55] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.4 MB/s (16736 bytes in 0.011s)
+[23:42:55] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:42:55] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:42:55] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:44:00] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:44:02] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:44:02] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.2 MB/s (17090 bytes in 0.013s)
+[23:44:02] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:44:02] 
+[23:44:02] ========== L?N ??C 26 ==========
+[23:44:05] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:44:05] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.1 MB/s (17090 bytes in 0.015s)
+[23:44:05] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_234405_356_0026_chuong-45-may-ngay-lien-mua-chuc-nghiep-gia.txt
+[23:44:05] S? ký t?: 8208
+[23:44:05] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:44:37] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:44:39] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:44:39] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 2.0 MB/s (17090 bytes in 0.008s)
+[23:44:39] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:44:39] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:44:39] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:45:46] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:45:48] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:45:48] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.8 MB/s (20408 bytes in 0.025s)
+[23:45:48] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:45:48] 
+[23:45:48] ========== L?N ??C 27 ==========
+[23:45:50] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:45:51] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.2 MB/s (20408 bytes in 0.016s)
+[23:45:51] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_234551_046_0027_chuong-46-ben-tau-cung-bien-mat-quy-nuoc-sua.txt
+[23:45:51] S? ký t?: 10353
+[23:45:51] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:46:23] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:46:26] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:46:26] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.5 MB/s (20408 bytes in 0.013s)
+[23:46:26] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:46:26] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:46:26] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:47:32] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:47:34] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:47:34] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.8 MB/s (16607 bytes in 0.019s)
+[23:47:34] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:47:34] 
+[23:47:34] ========== L?N ??C 28 ==========
+[23:47:37] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:47:37] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.7 MB/s (16607 bytes in 0.024s)
+[23:47:37] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_234737_095_0028_chuong-47-can-than-quy-nuoc.txt
+[23:47:37] S? ký t?: 8186
+[23:47:37] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:48:10] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:48:12] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:48:12] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.9 MB/s (16927 bytes in 0.017s)
+[23:48:12] ?ã sang ch??ng m?i sau 13 l?n vu?t.
+[23:48:12] 
+[23:48:12] ========== L?N ??C 29 ==========
+[23:48:15] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:48:15] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.7 MB/s (16927 bytes in 0.009s)
+[23:48:15] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_234815_358_0029_chuong-48-trong-doi-dai-ca.txt
+[23:48:15] S? ký t?: 8257
+[23:48:15] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:48:48] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:48:50] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:48:50] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.8 MB/s (16928 bytes in 0.009s)
+[23:48:50] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:48:50] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:48:50] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:49:56] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:49:58] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:49:58] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.1 MB/s (17197 bytes in 0.015s)
+[23:49:58] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:49:58] 
+[23:49:58] ========== L?N ??C 30 ==========
+[23:50:01] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:50:01] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.4 MB/s (17197 bytes in 0.012s)
+[23:50:01] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_235001_246_0030_chuong-49-duoi-anh-trang-quai-vat.txt
+[23:50:01] S? ký t?: 8630
+[23:50:01] B?t ??u vu?t cho t?i khi sang ch??ng m?i...
+[23:50:33] ?ã vu?t 13 l?n, ki?m tra ch??ng...
+[23:50:36] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:50:36] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.0 MB/s (17198 bytes in 0.016s)
+[23:50:36] Ch?a sang ch??ng m?i, th? x? lý k?t loading cu?i ch??ng...
+[23:50:36] Có th? ?ang k?t ? màn loading cu?i ch??ng.
+[23:50:36] Vu?t lên 1 nh?p, ??i 10s, r?i vu?t xu?ng 2 l?n...
+[23:51:42] ?ã vu?t 26 l?n, ki?m tra ch??ng...
+[23:51:45] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:51:45] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 1.1 MB/s (17217 bytes in 0.015s)
+[23:51:45] ?ã sang ch??ng m?i sau 26 l?n vu?t.
+[23:51:45] 
+[23:51:45] ========== L?N ??C 31 ==========
+[23:51:47] UI dump: UI hierchary dumped to: /sdcard/window.xml
+[23:51:47] ADB pull: /sdcard/window.xml: 1 file pulled, 0 skipped. 0.9 MB/s (17217 bytes in 0.018s)
+[23:51:47] ?ã l?u: F:\craw\crawTtv\stories\adb-R7AW90DD2NZ-uElabt._adb-tls-connect._tcp\20260724_235147_646_0031_chuong-50-song-sot-sau-kiep-nan.txt
+[23:51:47] S? ký t?: 8416
+[23:51:47] B?t ??u vu?t cho t?i khi sang ch??ng m?i...

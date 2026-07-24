@@ -133,7 +133,7 @@ public class MTCMultiChapterCrawlerParaller {
     private static final int VERTICAL_SWIPE_REPEAT_COUNT = 8;
 
     /** Khoảng nghỉ giữa các lần vuốt dọc liên tiếp. */
-    private static final long VERTICAL_SWIPE_INTERVAL_MS = 500;
+    private static final long VERTICAL_SWIPE_INTERVAL_MS = 200;
 
     /** Bấm giữa màn hình để thử hiện thanh điều khiển đọc truyện. */
     private static final int SCREEN_CENTER_X = 10;
@@ -200,7 +200,7 @@ public class MTCMultiChapterCrawlerParaller {
     private static final int MAX_SCROLLS_TO_END_CHAPTER = 250;
 
     /** Cứ bao nhiêu lần vuốt thì dump XML kiểm tra đã sang chương mới chưa. */
-    private static final int CHECK_AFTER_SCROLL_COUNT = 13;
+    private static final int CHECK_AFTER_SCROLL_COUNT = 20;
     /** Vuốt xuống để xử lý màn hình loading ở cuối chương. */
     private static final int DOWN_SWIPE_X = 360;
     private static final int DOWN_SWIPE_START_Y = 280;
