@@ -1,0 +1,85 @@
+Chương 2593: Smallest Branch - Cành Cây Nhỏ Nhất
+
+Sunny lại nhìn thấy khu rừng rực rỡ một lần nữa, lần này là rất lâu sau khi Demon of Repose (Quỷ Của Sự Yên Nghỉ) đã tạo ra chu kỳ của các mùa.
+
+Cây cổ thụ — avatar của Heart God (Thần Trái Tim) — cũng khác. Thay vì khao khát sự tăng trưởng theo cấp số nhân, nó đứng sừng sững như một cột trụ chống đỡ cả trời và đất, bất biến và ổn định trong sự vinh quang cao chót vót của nó.
+
+Các cành cây giống như một thế giới tự thân, với các thành phố của con người được xây dựng trên bề mặt phong hóa của chúng. Con người không còn mặc áo da thú hay sử dụng vũ khí bằng đá lửa nữa, đã thành thạo các công cụ tinh xảo hơn nhiều và phát triển một nền văn hóa phức tạp... điều đó cho thấy cậu không còn nhìn thấy buổi bình minh của thời gian nữa.
+
+Đây hẳn phải là Age of Heroes (Kỷ Nguyên Anh Hùng) — kỷ nguyên của các thống lĩnh phàm trần chiến đấu chống lại các Corrupted Creature (Sinh Vật Tha Hóa) để giành quyền thống trị thế giới.
+
+Tuy nhiên, cuộc đấu tranh đó đang diễn ra ở đâu đó xa xôi, trong các cõi giới phàm trần. Void (Hư Không) không thể gây ảnh hưởng trong Heart Realm (Cõi Trái Tim) và do đó, không thể có Corruption (Sự Tha Hóa) trong khu rừng thiêng.
+
+Đó là lý do tại sao thật đáng kinh ngạc khi thấy World Tree (Cây Thế Giới) ngã bệnh.
+
+Một sự thối rữa độc hại lan rộng qua thân và cành của nó, biến những mảng lớn của vỏ cây phong hóa thành màu đen. Nhựa cây vàng đã biến thành những dòng mủ đen ghê tởm, chảy từ các thung lũng thối rữa và mưa xuống mặt đất xa xôi.
+
+Những quả vàng bị những con giòi khổng lồ nuốt chửng, và các thống lĩnh của con người tập hợp thành các đội quân để chống lại những nỗi kinh hoàng sinh ra từ chúng.
+
+Những chiếc lá vĩnh cửu khô héo và rụng xuống, bị gió cuốn đi.
+
+Dù con người có chống cự quyết liệt đến đâu, sự thối rữa ghê tởm vẫn tiếp tục lan rộng, từ từ nuốt chửng ngày càng nhiều cây cối qua nhiều thế hệ. Bản thân cây cổ thụ cũng đã cố gắng chiến đấu với bệnh tật của mình, nhưng căn bệnh xảo quyệt vẫn tiếp tục ăn mòn nó từ bên trong, dần dần lan rộng về phía rễ của nó.
+
+Cây cổ thụ là một cột trụ của sự tồn tại, chống đỡ các tầng trời và nâng đỡ trái đất... và cột trụ đó đang từ từ sụp đổ.
+
+Sunny kinh hoàng trước hình ảnh của vật chứa đang chết dần của một vị thần.
+
+Dường như không thể tưởng tượng được rằng một avatar của Heart God (Thần Trái Tim) lại có thể đến gần cái chết như vậy... rất lâu trước khi bị đốt cháy và lật đổ trong Doom War (Cuộc Chiến Diệt Vong). Rốt cuộc, các vị thần là vĩ đại và không thể diễn tả được – họ được cho là gần như bất khả xâm phạm, nếu không vì quy luật tuyệt đối của sự không hoàn hảo mà chính họ đã tạo ra.
+
+Nhưng có lẽ các avatar của các vị thần thì không như vậy.
+
+Trong mọi trường hợp, Sunny cảm thấy một cảm giác tò mò đen tối khi quan sát World Tree (Cây Thế Giới) thối rữa. Cậu đang cố gắng hiểu căn bệnh đang tàn phá nó là gì.
+
+Sự thối rữa lan rộng trông giống như Corruption (Sự Tha Hóa) – những gì cậu tưởng tượng Corruption (Sự Tha Hóa) sẽ trông như thế nào, nếu được biểu hiện như một lực lượng vật lý – nhưng nó không phải vậy.
+
+Thay vào đó, căn bệnh ghê tởm... là một sinh vật sống.
+
+Một Unholy Terror (Kinh Hoàng Bất Kính) — một tàn dư độc ác của Age of Chaos (Kỷ Nguyên Hỗn Mang) hoặc có lẽ là một lời nguyền xảo quyệt được thốt ra bởi một Void Creature (Sinh Vật Hư Không) mà các vị thần đã giết.
+
+Rốt cuộc, không phải tất cả các Chaos Creature (Sinh Vật Hỗn Loạn) đã bị phong ấn cùng với Void (Hư Không). Giống như một trong những vị thần cuối cùng bị mắc kẹt sau phong ấn, một số trong số chúng đã trốn thoát – ví dụ như sinh vật mà cái chết của nó đã sinh ra Hollow Mountains (Dãy Núi Hollow) và máu của nó trở thành nguồn gốc của bóng tối thực sự.
+
+Các vị thần đã chiến đấu với các Sinh vật Hư Không còn sót lại vào buổi bình minh của Age of Gods (Kỷ Nguyên Thần Thánh) được các daemon hỗ trợ, và những vết sẹo do những trận chiến nguyên thủy đó để lại vẫn có thể được tìm thấy trên khắp Dream Realm (Cõi Mộng).
+
+Các Corrupted (Tha Hóa) đến sau, nhưng một số trong số chúng cũng trở nên mạnh mẽ không kém. Dường như đủ mạnh để ngay cả một avatar của một trong những vị thần cũng không thể chống lại Unholy Terror (Kinh Hoàng Bất Kính) cụ thể này... nếu không có sự giúp đỡ.
+
+Và nó đã nhận được sự giúp đỡ.
+
+Đáp lại lời kêu gọi của Heart God (Thần Trái Tim) Demon of Repose (Quỷ Của Sự Yên Nghỉ) lại trở về khu rừng thiêng một lần nữa.
+
+Ariel, Demon of Dread (Quỷ Của Sợ Hãi) đã từng đánh bại một Unholy Titan (Titan Bất Kính) trong trận chiến. Nhưng chị em của không chiến đấu với lời nguyền đang nuốt chửng World Tree (Cây Thế Giới) – đúng hơn, cô đã giúp cây cổ thụ chìm vào trạng thái phục hồi vô tận, để nó có thể nuốt chửng căn bệnh đang ăn mòn nó thay vào đó.
+
+World Tree (Cây Thế Giới) thối rữa và mọc lại. Lá của nó rụng xuống, và những chiếc lá mới mọc lên từ những chồi mới nhú. Vỏ cây chết vỡ vụn thành bụi, sau đó được thay thế bằng sự phát triển mới. Các cành cây bị bệnh gãy và rơi xuống, khiến thế giới rung chuyển khi chúng va vào trái đất, nhưng những cành cây mới xuất hiện thay thế chúng.
+
+Hết lần này đến lần khác, và cứ thế... không có hồi kết.
+
+Thối rữa, chết đi, và được tái sinh một lần nữa.
+
+Cho đến khi căn bệnh không còn nữa.
+
+Unholy Terror (Kinh Hoàng Bất Kính) đã chết, và World Tree (Cây Thế Giới) đã lấy lại được sức sống của mình.
+
+Tuy nhiên, các thành phố của con người đã làm nhà trên cành của nó đã bị tàn phá. Hầu hết chúng đã bị phá hủy, và những thành phố còn lại trở nên um tùm bởi lá và vỏ cây, không có một bóng người nào.
+
+Sự xuất hiện của Demon of Repose (Quỷ Của Sự Yên Nghỉ) là một ân huệ đối với cây cổ thụ, nhưng đó là một thảm họa không thể tả đối với những người đã sống trong bóng râm của lá của nó. Một tai họa không thể thoát khỏi, dự đoán, hoặc lý giải được.
+
+Rốt cuộc, có một lý do tại sao các daemon bị sợ hãi hơn tất cả các vị thần khác của thời cổ đại.
+
+Một khi căn bệnh nuốt chửng World Tree (Cây Thế Giới) không còn nữa, Demon of Repose (Quỷ Của Sự Yên Nghỉ) sẽ rời đi.
+
+Tuy nhiên, cô đã lấy một khoản thanh toán vì đã giúp Heart God (Thần Trái Tim) cứu avatar của nó.
+
+Khoản thanh toán đó là một cành cây non của cây cổ thụ.
+
+Và từ cành cây đó, cô đã tạo ra một con tàu tráng lệ.
+
+Một con tàu có sự sống rộng hơn một km từ mạn trái sang mạn phải, và dài gấp nhiều lần chiều rộng của nó. Một con tàu giống như một thành phố tự thân, với hàng chục boong tàu, những cung điện xinh đẹp, những ngôi chùa cao tầng được xây dựng trên bề mặt của nó, và những bí ẩn lớn lao ẩn giấu trong những khoang chứa vô biên của nó.
+
+Một con tàu với những khu rừng hoang dã, những dòng suối chảy xiết, và những hồ nước sâu.
+
+Demon of Repose (Quỷ Của Sự Yên Nghỉ) đã đặt tên cho con tàu của mình là Night Garden (Vườn Đêm) và biến nó thành nhà của mình.
+
+...World Tree (Cây Thế Giới) đã bị phá hủy từ lâu, và Demon of Repose (Quỷ Của Sự Yên Nghỉ) đã chết.
+
+Tuy nhiên, Night Garden (Vườn Đêm) vẫn còn – cây non sống sót cuối cùng của khu rừng vĩ đại một thời.
+
+---.

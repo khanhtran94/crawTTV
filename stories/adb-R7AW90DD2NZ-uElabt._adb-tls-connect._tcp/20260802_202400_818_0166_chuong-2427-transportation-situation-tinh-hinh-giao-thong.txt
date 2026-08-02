@@ -1,0 +1,117 @@
+Chương 2427: Transportation Situation - Tình Hình Giao Thông
+
+Aiko đang trong tâm trạng phơi phới khi gọi một cỗ xe ngựa, phương tiện di chuyển ưa thích của cô quanh Bastion.
+
+Việc đi lại trong Bastion thực ra là một vấn đề khá nan giải.
+
+Một dự án lớn đang được triển khai để đơn giản hóa việc này – các tuyến đường đặc biệt dành cho xe điện mặt đất đang được lắp đặt vào các trục đường chính, gia cố bằng ma thuật sơ khai.
+
+Đường ray được đúc từ một hợp kim đặc biệt có khả năng dẫn truyền tinh chất, trong khi bản thân xe điện thì được phù phép để di chuyển bằng cách hấp thụ tinh chất đó.
+
+Tuy nhiên, giờ đây Nhà máy Thủy điện Rivergate đã đi vào hoạt động, đã có những cuộc thảo luận về việc loại bỏ xe điện ma thuật để chuyển sang loại xe điện thông thường kiểu cũ.
+
+Aiko ngờ rằng, rốt cuộc, cả hai loại đều sẽ được triển khai, với các tuyến xe điện phù phép đóng vai trò là những trục đường chính của mạng lưới giao thông công cộng, trong khi những tuyến xe điện thông thường hơn sẽ rẽ nhánh từ chúng như những điểm vệ tinh.
+
+Chiếc xe điện đầu tiên dự kiến sẽ sớm được đưa vào sử dụng.
+
+Tuy nhiên, trước khi điều đó xảy ra, người dân Bastion có sáu cách chính để đi lại trong thành phố.
+
+Cách thứ nhất là sử dụng phà và băng qua hồ.
+
+Đương nhiên, cách này chỉ có thể đưa người ta đến một địa điểm khác trên bờ hồ – tuy nhiên, xét rằng thành phố bao quanh hồ như một chiếc nhẫn, việc di chuyển bằng đường thủy trước khi tiếp tục đi bộ thường nhanh hơn so với việc đi bộ toàn bộ quãng đường mà không bao giờ rời khỏi đất liền.
+
+Cách thứ hai là đơn giản nhất – đó là sử dụng đôi chân của chính mình.
+
+Tuy nhiên, Bastion là một thành phố khổng lồ, nên người ta có thể đi bộ theo đúng nghĩa đen trong nhiều ngày mà không bao giờ đến được đích nếu họ cần di chuyển đến một khu vực xa xôi của thành phố.
+
+Đương nhiên, Người Thức Tỉnh có lợi thế lớn hơn người thường về mặt đó, nhưng ngay cả họ cũng sẽ rất vất vả nếu chỉ đơn giản là đi bộ khắp mọi nơi.
+
+Cách thứ ba nhanh hơn nhiều, dù hơi bất tiện.
+
+Đó là thuê một chiếc xe kéo do Người Thức Tỉnh kéo – chúng có đủ hình dạng và kích cỡ, từ xe cá nhân hoặc xe hai chỗ đến những chiếc xe ngựa nặng có khả năng chở một tá hành khách trở lên.
+
+Tốc độ và sức chứa của chúng hoàn toàn phụ thuộc vào sức mạnh cá nhân của người kéo, và trong khi hầu hết Người Thức Tỉnh tìm kiếm những cơ hội tốt hơn, một số người coi việc sở hữu một chiếc xe kéo là một cách an toàn để kiếm một số tiền khiêm tốn.
+
+Cách thứ tư là một phiên bản thoải mái, sang trọng và uy tín hơn của cách thứ ba – đó là thuê một cỗ xe ngựa do một Echo (Vọng Ảnh) kéo.
+
+Không có Beastmaster (Bậc Thầy Dã Thú) nào ở Bastion, và do đó không có đội quân nào gồm những sinh vật ghê tởm bị mê hoặc để phục vụ như động cơ của cơ sở hạ tầng dân sự.
+
+Vì vậy, Echo (Vọng Ảnh) là lựa chọn tốt nhất tiếp theo.
+
+Đáng buồn thay, mặc dù ngày nay có nhiều Người Thức Tỉnh hơn rất nhiều trên thế giới, và hầu hết họ đang tiến hành chiến tranh chống lại Dream Realm (Cõi Mộng) trên nhiều mặt trận, vẫn không có đủ Echo (Vọng Ảnh) để khiến phương thức vận chuyển này trở nên phổ biến rộng rãi.
+
+Chỉ những người giàu có mới có đủ khả năng thuê một cỗ xe ngựa Echo (Vọng Ảnh).
+
+May mắn thay, Aiko thuộc nhóm người đó.
+
+Vì vậy, cô thích gọi một cỗ xe ngựa hơn, ngay cả khi có cách nhanh hơn để đến nơi cô muốn.
+
+Cách nhanh hơn đó là cưỡi một thú cưỡi Echo (Vọng Ảnh).
+
+Không phải tất cả Người Thức Tỉnh đều có Echo (Vọng Ảnh) và thậm chí còn ít người hơn có Echo (Vọng Ảnh) có thể cưỡi được như thú cưỡi – tuy nhiên, việc sở hữu một con nhanh chóng trở thành hình ảnh thu nhỏ của đẳng cấp, uy tín và sự hào nhoáng.
+
+Đến mức những thú cưỡi Echo (Vọng Ảnh) ấn tượng không chỉ được săn lùng rộng rãi, mà đôi khi còn đắt hơn cả những con thú chiến đấu mạnh mẽ.
+
+Việc sở hữu một thú cưỡi đặc biệt ấn tượng có thể khiến một Người Thức Tỉnh trở nên nổi tiếng và được quần chúng ngưỡng mộ ngay lập tức.
+
+Aiko có lẽ có thể sắm cho mình một hoặc hai thú cưỡi Echo (Vọng Ảnh) xinh xắn, sành điệu và hoàn toàn tuyệt vời, nhưng cô hoàn toàn không thích cưỡi chúng.
+
+Tại sao cô lại muốn lắc lư và kêu lạch cạch trên lưng một con thú cao chót vót? Không chỉ làm hỏng mái tóc được tạo kiểu một cách tài tình của cô bằng cách làm rối nó – thật kinh hoàng! – mà nó còn làm nhăn quần áo của cô, chưa kể đến việc hạn chế tủ quần áo của cô nữa.
+
+'Cảm ơn, nhưng không cần đâu!'
+
+Cách cuối cùng để đi lại quanh Bastion khá kỳ lạ và, trớ trêu thay, lại cạnh tranh với các thú cưỡi Echo (Vọng Ảnh) cá nhân về sự tiện lợi.
+
+Không chỉ vậy, nó còn dễ dàng tiếp cận với mọi công dân, dù là Người Thức Tỉnh hay không.
+
+Phương pháp đó là đi xe đạp.
+
+Xe đạp không phải là những cỗ máy quá phức tạp, vì vậy không có gì ngăn cản chúng được sử dụng trong Dream Realm (Cõi Mộng).
+
+Người dân Bastion thực sự đã hình thành một sự yêu thích đặc biệt đối với xe đạp – hầu hết vẫn được nhập khẩu từ thế giới thực, nhưng một số đã được chế tạo ngay tại thành phố này.
+
+Aiko biết rõ điều đó, vì chính cô đã đầu tư rất nhiều vào sản xuất xe đạp.
+
+Thực ra, cô đã đầu tư vào vô số doanh nghiệp quanh Bastion, nhưng kinh doanh xe đạp là một trong những con ngỗng đẻ trứng vàng của cô.
+
+Vì vậy, cô rất yêu chúng.
+
+Điều đó không có nghĩa là cô có xu hướng sử dụng xe đạp làm phương tiện di chuyển, và vì một lý do rất dễ hiểu.
+
+Aiko có thể làm cho một chiếc xe đạp bay.
+
+Nhưng cô không biết cách đi xe đạp.
+
+Toàn bộ sự việc khiến cô bối rối không nguôi.
+
+'Mình có nên nhờ Sếp dạy mình không nhỉ?' Đó hẳn sẽ là một câu chuyện hài hước để kể cho cháu chắt một ngày nào đó.
+
+Nếu cô còn sống để kể câu chuyện đó.
+
+Dù sao đi nữa, Aiko đã nhanh chóng gọi được một cỗ xe ngựa.
+
+Leo lên ghế ngồi êm ái, cô nói với người đánh xe nơi cô muốn đến và ngả người ra sau, tận hưởng khung cảnh và hơi ấm của mặt trời trên khuôn mặt.
+
+Cô thậm chí còn bắt đầu khe khẽ ngân nga một bài hát vui vẻ, cảm thấy ngày hôm nay của mình đơn giản không thể tuyệt vời hơn được nữa.
+
+Cô vẫn đang ngân nga bài hát đó thì cỗ xe ngựa đột nhiên rung chuyển và dừng lại đột ngột, như thể bị một trận động đất tấn công.
+
+Rồi, một con mắt màu vàng khổng lồ xuất hiện bên ngoài cửa sổ, nhìn chằm chằm vào Aiko với cường độ bỏng rát.
+
+Người đánh xe lùi lại trên ghế, la hét trong sợ hãi và phẫn nộ:
+
+"Một... một Echo (Vọng Ảnh)?! Ai đã để Echo (Vọng Ảnh) của họ chạy loạn thế này, chết tiệt?"
+
+Thở dài, Aiko mở cửa và bay ra khỏi cỗ xe ngựa.
+
+"Ăn nói cho cẩn thận!"
+
+Bên ngoài, một con sói khổng lồ đang ngồi trên mặt đất, cao chót vót trên cỗ xe ngựa như một ngọn núi nhỏ bằng lông trắng.
+
+Đuôi của nó đang vẫy điên cuồng, làm mặt đất rung chuyển nhè nhẹ với mỗi cú đập.
+
+Lưỡi con sói thè ra một bên miệng, và nó đang thở hổn hển một cách vui vẻ, nhìn chằm chằm vào Aiko với đôi mắt lấp lánh.
+
+Cô liếc nhìn người đánh xe và cau mày.
+
+"Đó không phải là một Echo (Vọng Ảnh). Anh không thấy sao? Đó là Saint Ling đáng kính. Cẩn thận lời nói của anh trước mặt một đứa trẻ, thưa ngài!".

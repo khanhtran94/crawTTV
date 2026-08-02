@@ -1,0 +1,145 @@
+Chương 2316: Winning Strategy - Chiến Lược Chiến Thắng
+
+Trong khi chế tạo mũi tên, Sunny nhặt một mũi bằng bàn tay bóng tối và dùng nó vẽ một lưới ô vuông trên nền tro.
+
+Bảy hàng, mỗi hàng bảy ô vuông… tổng cộng bốn mươi chín ô.
+
+Sau đó, cậu đánh dấu một số ô vuông bằng các rune khác nhau.
+
+Sunny đã không chú ý kỹ vị trí các quân cờ trên bàn cờ ngọc bích, nhưng cậu vẫn nhớ lại nó một cách hoàn hảo.
+
+Cũng có năm ô vuông được đánh dấu bằng các hình khắc đặc biệt – một ô ở chính giữa bàn cờ, và một ô ở giữa mỗi hàng ngoài cùng.
+
+Cuối cùng, cậu chỉ vào lưới ô vuông và nói.
+
+"Đây là hình dạng bàn cờ trong Phòng Đồ Chơi. Như các cậu thấy, Ash Domain (Lãnh Địa Tro Tàn) đang trên bờ vực thất bại. Chúng ta chỉ còn lại ba ô vuông, bị chiếm giữ bởi Ash Tyrant (Bạo Chúa Tro Tàn) - đó là tôi - và hai Ash Beast (Dã Thú Tro Tàn). Đó là cậu và Slayer."
+
+Cậu chỉ vào ba ô vuông ở hàng dưới cùng của lưới ô vuông.
+
+Vì một trong số đó là ô giữa của một hàng ngoài cùng, nó được đánh dấu bằng một rune đặc biệt.
+
+"Các cậu nên thấy pháo đài phía sau chúng ta. Tôi nghĩ đó là Ash Castle (Lâu Đài Tro Tàn) - một trong những ô vuông đặc biệt mà Seishan đã đề cập. Có một hình khắc tương tự trên ô đối diện, vì vậy đây là nơi Snow Castle (Lâu Đài Tuyết) nên ở." Sunny chỉ mũi tên vào ô giữa của hàng trên cùng.
+
+"Tuy nhiên, các hình khắc trên ba ô vuông đặc biệt còn lại thì khác. Chúng không phải là Lâu Đài, nhưng chúng là gì? Tôi không biết. Cái ở chính giữa bàn cờ cũng khác với hai cái ở hàng ngoài cùng bên trái và bên phải."
+
+Sunny thở dài. "Ừm, cuối cùng chúng ta cũng sẽ biết thôi. Điều quan trọng hơn là vị trí của mười hai Snow Abomination (Sinh Vật Ghê Tởm Tuyết). Cậu có thấy một mô hình nào không?"
+
+Kai nghiên cứu lưới ô vuông.
+
+Trên đó, ba Snow Beast (Dã Thú Tuyết) đang đối mặt với ba quân cờ Ash còn lại.
+
+Ở phía đối diện của bàn cờ, Snow Tyrant (Bạo Chúa Tuyết) đang đứng trong Snow Castle (Lâu Đài Tuyết) được bảo vệ bởi một Snow Devil (Quỷ Dữ Tuyết) và hai Snow Beast (Dã Thú Tuyết) ở hàng dưới.
+
+Snow Devil (Quỷ Dữ Tuyết) thứ hai đang bảo vệ ô trung tâm của bàn cờ.
+
+Một Snow Demon (Ác Quỷ Tuyết) và hai Snow Monster (Quái Vật Tuyết) đang bảo vệ ô giữa ở hàng ngoài cùng bên phải.
+
+Và cuối cùng, quân cờ Snow cuối cùng – một Demon (Ác Quỷ) khác – đang ở góc dưới bên trái, một mình.
+
+Kai cau mày.
+
+"Đối với tôi, có vẻ như… ba Beast (Dã Thú) đang chuẩn bị bao vây Ash Castle (Lâu Đài Tro Tàn) trong khi phần còn lại của các quân cờ đang bảo vệ các ô vuông quan trọng trên bàn cờ. Ba quân đang bảo vệ Snow Castle (Lâu Đài Tuyết) và Tyrant (Bạo Chúa) của chúng, ba quân đang bảo vệ bất cứ thứ gì ở ô giữa bên phải đó, một quân đang bảo vệ trung tâm bản đồ. Và một quân dường như đã lạc đường và đi lang thang vào một góc."
+
+Sunny nhếch mép cười. "Chính xác."
+
+Kai nhìn cậu một lúc, rồi hỏi: "Vậy thì sao?"
+
+Sunny nhìn cậu đầy ẩn ý. "Làm sao tôi biết được? Tôi trông giống một kỳ thủ cờ vua vĩ đại đối với cậu sao?"
+
+Kai chớp mắt vài lần. "Cậu không phải à?"
+
+Sunny khịt mũi. "Không, tôi không phải. Thành thật mà nói, ngay khi tôi hiểu được cần những gì để chơi cờ giỏi, tôi ngay lập tức mất hứng thú. Để tôi nói cho cậu biết… đó không phải là một trò chơi, đó là một công việc vặt! Tại sao tôi lại lãng phí thời gian của mình để thành thạo một thứ gì đó nhàm chán như vậy?"
+
+Cậu lắc đầu.
+
+Chơi cờ với Teacher Julius lúc đầu rất vui và thú vị, nhưng khi Sunny nhận ra tất cả chỉ là các khuôn mẫu và tính toán, cậu nhanh chóng thấy chán.
+
+Rốt cuộc, cậu đã phải tính toán quá đủ trong cuộc sống thực rồi.
+
+Sự hỗn loạn đầy ngẫu hứng của cờ đam có vẻ vui hơn.
+
+Và đương nhiên, không gì có thể sánh bằng vị vua cao quý của các trò chơi, cờ tào cáo…
+
+Bởi vì có vô số cách để gian lận khi tung xúc xắc, đó mới là phần vui nhất.
+
+Sunny nhìn Kai. "Tại sao? Cậu giỏi cờ vua sao?"
+
+Kai gãi đầu mũi. "Không hẳn. Thành thật mà nói, việc nghiêm túc với cờ vua tốn rất nhiều thời gian. Và tôi, ờ… luôn có những cách tốt hơn để dành thời gian của mình."
+
+Sunny nhìn cậu đầy nghi ngờ.
+
+'Cậu ta vừa lịch sự chỉ ra rằng cậu ta có một cuộc sống sao?'
+
+Ừm, tất nhiên thôi! Gã đó hẳn là quá nổi tiếng để làm chủ tịch câu lạc bộ cờ vua rồi.
+
+Nếu Kai là chủ tịch của bất kỳ câu lạc bộ nào, thì đó có lẽ là câu lạc bộ những người làm tan chảy trái tim.
+
+Lắc đầu, Sunny thở dài.
+
+"Vậy là, không ai trong chúng ta biết gì về cách chiến thắng trong cờ vua. Thêm vào đó, đây thậm chí không phải là cờ vua… đây là Death Game (Trò Chơi Tử Thần). Thực ra, đó là một phiên bản kỳ lạ của Death Game (Trò Chơi Tử Thần) do Ariel tạo ra, hoạt động theo bộ quy tắc riêng của nó. Chúng ta chưa biết những quy tắc này, vì vậy sẽ khó để đưa ra một chiến lược."
+
+Cậu nhìn chằm chằm vào lưới ô vuông, vẻ mặt thoáng chút lo lắng.
+
+Nhưng rồi, Sunny cựa mình.
+
+"Thực ra…"
+
+Cậu quay đầu và nhìn Slayer, người đang đứng thờ ơ cách đó vài bước.
+
+"Tôi không hoàn toàn đúng. Có ai đó trong chúng ta có thể biết mọi thứ về cách chơi Death Game (Trò Chơi Tử Thần)."
+
+Slayer là Cái Bóng của một người đã sống ở Dream Realm (Cõi Mộng) hàng nghìn năm trước.
+
+Vì Death Game (Trò Chơi Tử Thần) đã phổ biến trong dân tộc cô ấy, cô ấy rất có thể là một người chơi bậc thầy.
+
+Sunny xem xét kỹ lưỡng cô ấy một lúc, rồi hỏi đầy hy vọng: "Này. Cô có biết cách chơi Death Game (Trò Chơi Tử Thần) không? Chiến lược tốt nhất là gì?"
+
+Liệu chiến thắng có thể xảy ra khi bốn mươi sáu trong số bốn mươi chín ô vuông đã thuộc về Snow Domain (Lãnh Địa Tuyết)?
+
+Slayer quay đầu và nhìn xuống cậu, đôi mắt đen như mực của cô không hề biểu lộ cảm xúc.
+
+Sunny gần như mất hy vọng khi cô ấy đột nhiên di chuyển, nhìn vào lưới ô vuông cậu đã vẽ.
+
+Cái Bóng vẫn bất động một lúc, rồi dùng mũi tên trong tay để khắc một rune vào tro bụi.
+
+Kai nhìn rune tò mò. "Hy sinh?"
+
+Sunny gật đầu chậm rãi.
+
+"Đúng… hy sinh. Chính xác hơn, đó là một loại hy sinh đặc biệt. Một vụ giết người hiến tế."
+
+Vì vậy, chiến lược mà Slayer đề xuất… là giết ai đó làm vật hiến tế.
+
+Kai cau mày.
+
+"Cô ấy đang đề nghị cậu nên hy sinh một trong những con tốt của mình sao?"
+
+Sunny đang nhìn vào lưới ô vuông. Cuối cùng, cậu từ từ lắc đầu.
+
+"Không… tôi không nghĩ vậy. Cậu có nhớ Seishan đã nói gì khác không? Rằng có những ô vuông đặc biệt trong một số phiên bản nhất định của Death Game (Trò Chơi Tử Thần) được gọi là Đền Thờ. Ở đó, các quân cờ đối phương có thể bị hiến tế để cường hóa quân cờ của chính mình."
+
+Nếu các Đền Thờ đủ quan trọng để Slayer chỉ ra chúng là chìa khóa chiến thắng… thì Snow Tyrant (Bạo Chúa Tuyết) cũng sẽ cực kỳ coi trọng việc bảo vệ các Đền Thờ đó.
+
+Từ đó, Sunny có thể suy ra ô đặc biệt nào trong năm ô đó ẩn chứa Đền Thờ.
+
+"Nếu tôi không nhầm, chúng là các ô giữa của hàng ngoài cùng bên phải và bên trái."
+
+Sunny nhìn Slayer và mỉm cười. "Vậy, cô có thể viết, hả?"
+
+Cô ấy chỉ nhìn cậu im lặng.
+
+Sunny cười khúc khích, rồi hỏi bằng một giọng trêu chọc: "Ừm, vậy thì, cô có thể vui lòng giải thích rõ ràng cho chúng tôi… làm thế nào để chúng ta thắng trò chơi chết tiệt này?"
+
+Slayer lặng lẽ nhìn cậu một lúc, rồi cúi người về phía trước.
+
+Mũi tên của cô cắm vào nền tro, xuyên qua ô vuông nơi Snow Castle (Lâu Đài Tuyết) tọa lạc, và phá hủy cổ tự rune tượng trưng cho Snow Tyrant (Bạo Chúa Tuyết).
+
+Sunny nhìn chằm chằm vào mũi tên vài giây, rồi nhếch mép cười.
+
+"Đúng như dự đoán…"
+
+CVT
+
+30/04/2025, 50 năm Ngày Giải phóng miền nam, thống nhất đất nước, chúc mọi người vui vẻ bên gia đình và người thân ạ!!!
+
+Mai đầu tháng, cầu đề cử ạ..
