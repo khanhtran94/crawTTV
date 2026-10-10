@@ -2,11 +2,13 @@ name: Wake Up and Health Check
 
 on:
   # Sự kiện kích hoạt từ cron job bên ngoài (ví dụ qua repository_dispatch hoặc workflow_dispatch)
+  workflow_dispatch:
   repository_dispatch:
     types: [ping-trigger]
   # Hoặc nếu bạn dùng schedule trực tiếp trên GitHub Actions
   schedule:
     - cron: '*/15 * * * *'
+
 
 jobs:
   check-health:
