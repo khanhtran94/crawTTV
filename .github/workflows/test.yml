@@ -2,8 +2,8 @@ name: Wake Up and Health Check
 
 on:
   workflow_dispatch:
-  repository_dispatch:
-    types: [ ping-trigger ]
+#  repository_dispatch:
+#    types: [ ping-trigger ]
   schedule:
     - cron: '*/10 * * * *'
 
