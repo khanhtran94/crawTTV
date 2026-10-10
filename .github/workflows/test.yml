@@ -4,8 +4,6 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [ checkHealth ]
-  schedule:
-    - cron: '*/10 * * * *'
 
 jobs:
   check-health:
