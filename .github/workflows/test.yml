@@ -1,16 +1,31 @@
-name: Test Schedule External
+name: Wake Up and Health Check
 
 on:
-  workflow_dispatch: # Vẫn giữ để bạn click tay khi cần
+  # Sự kiện kích hoạt từ cron job bên ngoài (ví dụ qua repository_dispatch hoặc workflow_dispatch)
   repository_dispatch:
-    types: [test_trigger] # Tên sự kiện do dịch vụ ngoài gửi vào
+    types: [ping-trigger]
+  # Hoặc nếu bạn dùng schedule trực tiếp trên GitHub Actions
+  # schedule:
+  #   - cron: '*/15 * * * *'
 
 jobs:
-  test:
+  check-health:
     runs-on: ubuntu-latest
     steps:
-      - name: Test scheduled trigger
+      - name: Wait for 14 minutes (840 seconds)
+        run: sleep 840
+
+      - name: Ping Health Check Endpoint
         run: |
-          echo "Event: ${{ github.event_name }}"
-          echo "UTC time:"
-          date -u
+          URL="https://learn-english-co7q.onrender.com/health" # Thay bằng URL health check thực tế của bạn
+          echo "Đang kiểm tra health check tại: $URL"
+          
+          response=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
+          echo "HTTP Status Code nhận được: $response"
+          
+          if [ "$response" -eq 200 ]; then
+            echo "✅ Ứng dụng hoạt động bình thường!"
+          else
+            echo "❌ Cảnh báo: Ứng dụng trả về mã lỗi $response!"
+            exit 1 # Tùy chọn: báo lỗi trên GitHub Actions nếu cần
+          fi
